@@ -15,7 +15,7 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/test/articles/2019-06-14/article.html",
+		"oAP": "/doc/articles/2019-06-14/article.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -25,16 +25,22 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/test/2019-06-04/index.html",
+		"oAP": "/doc/2019-06-04/index.html",
 		"oF": 3,
 		"oS": 0
+		},
+	"/doc": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/doc/doc",
+		"oF": 0
 		},
 	"/src/assets/han-space.otf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/test/assets/han-space.otf",
+		"oAP": "/doc/assets/han-space.otf",
 		"oF": 0
 		},
 	"/src/assets/han-space.woff": {
@@ -42,7 +48,7 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/test/assets/han-space.woff",
+		"oAP": "/doc/assets/han-space.woff",
 		"oF": 0
 		},
 	"/src/assets/han-space.woff2": {
@@ -50,7 +56,7 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/test/assets/han-space.woff2",
+		"oAP": "/doc/assets/han-space.woff2",
 		"oF": 0
 		},
 	"/src/assets/han.otf": {
@@ -58,7 +64,7 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/test/assets/han.otf",
+		"oAP": "/doc/assets/han.otf",
 		"oF": 0
 		},
 	"/src/assets/han.vfb": {
@@ -66,7 +72,7 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/test/assets/han.vfb",
+		"oAP": "/doc/assets/han.vfb",
 		"oF": 0
 		},
 	"/src/assets/han.woff": {
@@ -74,7 +80,7 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/test/assets/han.woff",
+		"oAP": "/doc/assets/han.woff",
 		"oF": 0
 		},
 	"/src/assets/han.woff2": {
@@ -82,7 +88,7 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/test/assets/han.woff2",
+		"oAP": "/doc/assets/han.woff2",
 		"oF": 0
 		},
 	"/src/assets/vconsole.min.js": {
@@ -91,7 +97,7 @@
 		"ma": 0,
 		"mi": 0,
 		"oA": 2,
-		"oAP": "/test/assets/vconsole.min.js",
+		"oAP": "/doc/assets/vconsole.min.js",
 		"oF": 3,
 		"sC": 0,
 		"tS": 0
@@ -102,7 +108,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/test/assets/libs.js",
+		"oAP": "/doc/libs.js",
 		"oF": 3,
 		"sC": 0,
 		"tS": 0
@@ -113,7 +119,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/test/javascript/min/_misc-min.js",
+		"oAP": "/doc/javascript/min/_misc-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -124,7 +130,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/test/javascript/_vendor/min/bodyScrollLock-min.js",
+		"oAP": "/doc/javascript/_vendor/min/bodyScrollLock-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -135,7 +141,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/test/javascript/_vendor/min/doT-min.js",
+		"oAP": "/doc/javascript/_vendor/min/doT-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -146,7 +152,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/test/javascript/_vendor/min/han-min.js",
+		"oAP": "/doc/javascript/_vendor/min/han-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -157,7 +163,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/test/javascript/_vendor/min/system-min.js",
+		"oAP": "/doc/javascript/_vendor/min/system-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -168,7 +174,7 @@
 		"ma": 1,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "/test/assets/app.js",
+		"oAP": "/doc/app.js",
 		"oF": 3,
 		"sC": 3,
 		"tS": 1
@@ -179,7 +185,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/test/javascript/class/min/ajax-min.js",
+		"oAP": "/doc/javascript/class/min/ajax-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -190,7 +196,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/test/javascript/class/min/util-min.js",
+		"oAP": "/doc/javascript/class/min/util-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -201,7 +207,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/test/javascript/polyfill/min/customEvent-min.js",
+		"oAP": "/doc/javascript/polyfill/min/customEvent-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -212,7 +218,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/test/javascript/polyfill/min/es6-promise.auto-min.js",
+		"oAP": "/doc/javascript/polyfill/min/es6-promise.auto-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -223,7 +229,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/test/javascript/polyfill/min/fetch-min.js",
+		"oAP": "/doc/javascript/polyfill/min/fetch-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -234,7 +240,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/test/javascript/polyfill/min/fullscreen-api-polyfill-min.js",
+		"oAP": "/doc/javascript/polyfill/min/fullscreen-api-polyfill-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -245,7 +251,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/test/javascript/polyfill/min/requestAnimationFrame-min.js",
+		"oAP": "/doc/javascript/polyfill/min/requestAnimationFrame-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -256,7 +262,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/test/javascript/view/min/essay-min.js",
+		"oAP": "/doc/javascript/view/min/essay-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -270,7 +276,7 @@
 		"ma": 1,
 		"mS": 0,
 		"oA": 1,
-		"oAP": "/test/test/assets/_define.css",
+		"oAP": "/doc/test/assets/_define.css",
 		"oF": 0,
 		"oS": 0,
 		"rwU": 0,
@@ -286,7 +292,7 @@
 		"ma": 1,
 		"mS": 0,
 		"oA": 1,
-		"oAP": "/test/test/assets/_mixin.css",
+		"oAP": "/doc/test/assets/_mixin.css",
 		"oF": 0,
 		"oS": 0,
 		"rwU": 0,
@@ -302,7 +308,7 @@
 		"ma": 1,
 		"mS": 0,
 		"oA": 0,
-		"oAP": "/test/assets/app.css",
+		"oAP": "/doc/assets/app.css",
 		"oF": 2,
 		"oS": 0,
 		"rwU": 0,
@@ -318,7 +324,7 @@
 		"ma": 1,
 		"mS": 0,
 		"oA": 1,
-		"oAP": "/test/test/assets/basis.css",
+		"oAP": "/doc/test/assets/basis.css",
 		"oF": 1,
 		"oS": 0,
 		"rwU": 0,
@@ -334,7 +340,7 @@
 		"ma": 1,
 		"mS": 0,
 		"oA": 1,
-		"oAP": "/test/less/test/assets/han.css",
+		"oAP": "/doc/less/test/assets/han.css",
 		"oF": 0,
 		"oS": 0,
 		"rwU": 0,
@@ -350,7 +356,7 @@
 		"ma": 1,
 		"mS": 0,
 		"oA": 1,
-		"oAP": "/test/test/assets/misc.css",
+		"oAP": "/doc/test/assets/misc.css",
 		"oF": 0,
 		"oS": 0,
 		"rwU": 0,
@@ -366,7 +372,7 @@
 		"ma": 1,
 		"mS": 0,
 		"oA": 1,
-		"oAP": "/test/less/test/assets/article.css",
+		"oAP": "/doc/less/test/assets/article.css",
 		"oF": 0,
 		"oS": 0,
 		"rwU": 0,
@@ -379,7 +385,7 @@
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/test/less/vendor/han-ck.css",
+		"oAP": "/doc/less/vendor/han-ck.css",
 		"oF": 1,
 		"oS": 0
 		},
@@ -392,7 +398,7 @@
 		"ma": 1,
 		"mS": 0,
 		"oA": 1,
-		"oAP": "/test/less/test/assets/normalize.css",
+		"oAP": "/doc/less/test/assets/normalize.css",
 		"oF": 1,
 		"oS": 0,
 		"rwU": 0,
@@ -402,7 +408,7 @@
 	"/src/pug/_dot": {
 		"ft": 65536,
 		"oA": 1,
-		"oAP": "/test/pug/_dot",
+		"oAP": "/doc/pug/_dot",
 		"oF": 0
 		},
 	"/src/pug/_head.pug": {
@@ -411,7 +417,7 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/test/pug/_head.html",
+		"oAP": "/doc/pug/_head.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -421,7 +427,7 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/test/pug/_template.html",
+		"oAP": "/doc/pug/_template.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -431,15 +437,9 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/test/article-sample/index.html",
+		"oAP": "/doc/test/article-sample/index.html",
 		"oF": 3,
 		"oS": 0
-		},
-	"/test": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/test/test",
-		"oF": 0
 		}
 	},
 "hooks": [
@@ -461,7 +461,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "logo-react",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 597250150.85083699
+	"lastBuiltDate": 597332859.22148597
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -720,7 +720,7 @@
 	"browserRefreshDelay": 0,
 	"browserslistString": ">0.1%, last 2 versions, Firefox ESR, not dead",
 	"buildFolderActive": 1,
-	"buildFolderName": "test",
+	"buildFolderName": "doc",
 	"cleanBuild": 1,
 	"coffeeLintFlags2": {
 		"arrow_spacing": {
@@ -2805,7 +2805,7 @@
 		},
 	"uglifyMangleNames": 1,
 	"uglifyReservedNamesString": "$",
-	"websiteRelativeRoot": "/test"
+	"websiteRelativeRoot": "/doc"
 	},
 "settingsFileVersion": "3"
 }
