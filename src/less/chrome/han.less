@@ -1,0 +1,176 @@
+/*! 漢字標準格式 v3.3.0 | MIT License | css.hanzi.co */
+/*! Han.css: the CSS typography framework optimised for Hanzi */
+
+/*! A customized version by realfish */
+
+h-hws,
+h-hws[hidden] {
+	display    : inline;
+	font-family: Arial;
+}
+
+h-hws:before,
+h-hws[hidden]:before {
+	content       : " ";
+	letter-spacing: -.04em;
+}
+
+code h-hws,
+code h-hws[hidden],
+kbd h-hws,
+kbd h-hws[hidden],
+samp h-hws,
+samp h-hws[hidden],
+pre h-hws,
+pre h-hws[hidden],
+h-hws.quote-inner,
+h-hws[hidden].quote-inner,
+h-hws.quote-outer:lang(zh-Hans),
+h-hws[hidden].quote-outer:lang(zh-Hans),
+h-hws.quote-outer:lang(zh-CN),
+h-hws[hidden].quote-outer:lang(zh-CN) {
+	display: none;
+}
+
+@font-face {
+	src          : url("han.woff2?v3.3.0") format("woff2"), url("han.woff?v3.3.0") format("woff"), url("han.otf?v3.3.0") format("opentype");
+	font-family  : "Han Space";
+	unicode-range: U+20;
+}
+
+@font-face {
+	src          : url("han.woff2?v3.3.0") format("woff2"), url("han.woff?v3.3.0") format("woff"), url("han.otf?v3.3.0") format("opentype");
+	font-family  : "Romanization Sans";
+	unicode-range: U+0307, U+030D, U+0358, U+F31B4-F31B7, U+F0061, U+F0065, U+F0069, U+F006F, U+F0075;
+}
+
+h-char.bd-hangable:lang(zh) h-cs,
+h-char.bd-hangable:lang(zh-Hant) h-cs,
+h-char.bd-hangable:lang(zh-TW) h-cs,
+h-char.bd-hangable:lang(zh-HK) h-cs,
+h-cs,
+h-char.bd-hangable:lang(zh) h-cs[hidden],
+h-char.bd-hangable:lang(zh-Hant) h-cs[hidden],
+h-char.bd-hangable:lang(zh-TW) h-cs[hidden],
+h-char.bd-hangable:lang(zh-HK) h-cs[hidden],
+h-cs[hidden] {
+	display    : inline;
+	visibility : inherit;
+	font-family: inherit;
+	font-size  : inherit;
+}
+
+h-cs.hangable-outer,
+h-cs.hangable-outer[hidden] {
+	display: inline;
+	font   : 1em "Han Space";
+}
+
+h-cs.hangable-outer:lang(zh-Hant),
+h-cs.hangable-outer[hidden]:lang(zh-Hant),
+h-cs.hangable-outer:lang(zh-TW),
+h-cs.hangable-outer[hidden]:lang(zh-TW),
+h-cs.hangable-outer:lang(zh-HK),
+h-cs.hangable-outer[hidden]:lang(zh-HK) {
+	display: none;
+}
+
+h-char.bd-hangable:lang(zh-Hans),
+h-char.bd-hangable:lang(zh-CN),
+h-char.bd-hangable:lang(ja) {
+	position: relative;
+}
+
+h-char.bd-hangable:lang(zh-Hans):after,
+h-char.bd-hangable:lang(zh-CN):after,
+h-char.bd-hangable:lang(ja):after {
+	display: none !important;
+}
+
+h-char.bd-hangable:lang(zh-Hans):before,
+h-char.bd-hangable:lang(zh-CN):before,
+h-char.bd-hangable:lang(ja):before {
+	display: inline !important;
+	content: " ";
+	font   : 1em "Han Space", Menlo, Consolas, Courier;
+}
+
+h-char.bd-hangable:lang(zh-Hans)>h-inner,
+h-char.bd-hangable:lang(zh-CN)>h-inner,
+h-char.bd-hangable:lang(ja)>h-inner {
+	-moz-text-emphasis   : none;
+	-webkit-text-emphasis: none;
+	text-emphasis        : none;
+	font-style           : normal;
+	font-weight          : normal;
+	line-height          : normal;
+	text-decoration      : none;
+	text-indent          : 0;
+	position             : absolute;
+	left                 : 0;
+	top                  : 0;
+	display              : inline-block;
+	line-height          : 1.444;
+}
+
+ruby h-char.bd-hangable:lang(zh-Hans)>h-inner,
+ruby h-char.bd-hangable:lang(zh-CN)>h-inner,
+ruby h-char.bd-hangable:lang(ja)>h-inner,
+h-ru h-char.bd-hangable:lang(zh-Hans)>h-inner,
+h-ru h-char.bd-hangable:lang(zh-CN)>h-inner,
+h-ru h-char.bd-hangable:lang(ja)>h-inner {
+	position: relative;
+}
+
+h-char.bd-jiya.bd-open:before,
+h-char.bd-jiya.bd-end:after,
+h-cs,
+h-cs[hidden] {
+	display       : none;
+	visibility    : hidden;
+	content       : " ";
+	font          : .825em Courier;
+	letter-spacing: 0;
+	white-space   : normal;
+}
+
+h-cs.jinze-outer,
+h-cs.jinze-outer[hidden] {
+	display: inline;
+}
+
+h-char.bd-jiya.bd-open>h-inner {
+	margin-left: -.5em;
+}
+
+h-char.bd-jiya.bd-close>h-inner,
+h-char.bd-jiya.bd-cop>h-inner,
+h-char.bd-jiya[unicode="ff0e"]>h-inner {
+	letter-spacing: -.5em;
+}
+
+h-char.bd-jiya.bd-open:before,
+h-char.bd-jiya.bd-close:after,
+h-char.bd-jiya.bd-cop:after,
+h-char.bd-jiya[unicode="ff0e"]:after {
+	display: inline;
+}
+
+h-char.bd-consecutive.bd-end:not(.end-portion):after,
+h-char.bd-consecutive.bd-open[prev="bd-open"]:before,
+h-cs.jiya-outer.bd-end:not(.end-portion) {
+	display: none;
+}
+
+h-cs.jiya-outer.bd-end[next="bd-open"] {
+	display: inline;
+}
+
+h-char.bd-consecutive[unicode="b7"]:not(.end-portion),
+h-char.bd-consecutive[unicode="30fb"]:not(.end-portion) {
+	letter-spacing: -.5em;
+}
+
+h-char.bd-consecutive.bd-liga:not(.end-portion) {
+	margin-right: -.25em;
+}

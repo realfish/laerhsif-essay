@@ -1,0 +1,36 @@
+doctype html
+
+block var
+	- var pageTitl
+	- var pageDisc
+	- var pageKeyw
+	- var bodyClass
+	- var bodyClassModifier
+	- var modalClassModifier
+	- var isStickyFooter
+
+- if (bodyClassModifier) bodyClassModifier = " " + bodyClassModifier
+
+html(lang="en")
+	block head
+		include _head
+	
+	body(class=(bodyClass + bodyClassModifier))
+		block bodyHeader
+		
+		block bodyMain
+			main(role="main" class=(isStickyFooter ? 'stickyFooter' : ''))
+				block mainHeader
+				block mainBody
+				block mainFooter
+		
+		block bodyFooter
+		
+		block dotTemplate
+		block dotTemplateGlobal
+			//- script#tmpl-message(type="text/x-dot-template")
+				include _dot/message.html
+		
+		block bodyScripts
+			script(type="text/javascript" src=`${assetsPath}assets/libs.js?v=${verTag}`)
+			script(type="text/javascript" src=`${assetsPath}assets/app.js?v=${verTag}`)

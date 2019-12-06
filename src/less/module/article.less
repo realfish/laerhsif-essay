@@ -1,0 +1,164 @@
+.article {
+	position      : relative;
+	padding-top   : 120px;
+	padding-bottom: 120px;
+	font-size     : 18px;
+}
+
+.article-header {
+	position     : relative;
+	width        : 32em;
+	padding-left : (80px + 72);
+	padding-right: (288px + 72);
+	margin-left  : auto;
+	margin-right : auto;
+	color        : @text-dark;
+	font-family  : @font-song-head;
+	
+	h1 {
+		font-size     : 32px;
+		font-weight   : 600;
+		line-height   : 40px;
+		letter-spacing: 2px;
+	}
+	aside {
+		position             : absolute;
+		top                  : 6px;
+		left                 : 0;
+		width                : 80px;
+		font-family          : @font-serif-body;
+		font-size            : 12px;
+		font-feature-settings: 'onum';
+		text-align           : right;
+	}
+	
+	@media screen and (max-width: 768px) {
+		padding-left : 0;
+		padding-right: 0;
+		text-align   : center;
+
+		aside {
+			position  : static;
+			top       : unset;
+			left      : unset;
+			width     : auto;
+			margin-top: 12px;
+			text-align: center;
+		}
+	}
+}
+
+.article-body {
+	margin-top : 120px;
+	font-family: @font-song-body;
+	text-align : justify;
+	line-height: 32px;
+	
+	&::after {
+		content      : '❦';
+		display      : block;
+		width        : 576px;
+		padding-left : (80px + 72);
+		padding-right: (288px + 72);
+		margin-top   : 60px;
+		margin-left  : auto;
+		margin-right : auto;
+		font-family  : "Zapf Dingbats", sans-serif;
+		font-size    : 32px;
+	}
+	
+	p {
+		width        : 32em;
+		padding-left : (80px + 72);
+		padding-right: (288px + 72);
+		margin-top   : 18px;
+		margin-left  : auto;
+		margin-right : auto;
+	}
+	
+	strong {
+		font-family: @font-hei-body;
+		font-weight: 500;
+	}
+	
+	@media screen and (max-width: 768px) {
+		&::after {
+			width        : 576px;
+			padding-left : 0;
+			padding-right: 0;
+		}
+		
+		p {
+			width        : 32em;
+			padding-left : 0;
+			padding-right: 0;
+		}
+	}
+}
+
+ul.article-footnote {
+	position    : absolute;
+	top         : -999px;
+	right       : -999px;
+	height      : 0;
+	color       : @text-dark;
+	font-family : @font-hei-body;
+	font-size   : 12px;
+	font-weight : 400;
+	line-height : 18px;
+
+	li {
+		visibility: visible;
+		position  : relative;
+		width     : 24em;
+		text-align: justify;
+	}
+	a.fn-mark {
+		position  : absolute;
+		top       : 0;
+		left      : -16px;
+		width     : 8px;
+		font-size : 18px;
+		text-align: right;
+	}
+	
+	@media screen and (max-width: 768px) {
+		li {
+			--arrow-left    : 0px;
+			visibility      : hidden;
+			position        : absolute;
+			padding         : 16px;
+			border-radius   : 4px;
+			background-color: @bg-main;
+			box-shadow      :
+				0 1px 2px 0 fadeout(black, 88%),
+				0 2px 4px 0 fadeout(black, 76%);
+
+			&::before,
+			&::after {
+				content         : "";
+				position        : absolute;
+				left            : var(--arrow-left);
+				width           : 8px;
+				height          : 8px;
+				background-color: @bg-main;
+				top             : -4px;
+				transform       : rotateZ(45deg);
+			}
+			&::before {
+				z-index: -@zIndex-1;
+				opacity: 0.8;
+				box-shadow:
+					0   0   2px 0 fadeout(black, 88%),
+					1px 1px 4px 0 fadeout(black, 76%);
+			}
+			
+			&.is-active {
+				visibility: visible;
+			}
+		}
+		a.fn-mark {
+			display: none;
+		}
+	}
+}

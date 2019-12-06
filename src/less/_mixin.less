@@ -1,0 +1,68 @@
+/**
+ * Mixin
+ */
+
+.clearfix() {
+	&::after {
+		content: ".";
+		display: block;
+		height: 0;
+		visibility: hidden;
+		clear: both;
+		font-size: 0;
+	}
+}
+
+.color-transition() {
+	@dur: 0.15s;
+	
+	transition:
+		border-color @dur ease-out,
+		box-shadow @dur ease-out,
+		background-color @dur ease-out,
+		color @dur ease-out,
+		fill @dur ease-out,
+		opacity @dur ease-out;
+	will-change:
+		border-color,
+		box-shadow @dur ease-out,
+		background-color,
+		color,
+		fill,
+		opacity;
+}
+
+.deco-line(@width, @border) {
+	content: "";
+	display: block;
+	width: @width;
+	height: 0;
+	border-bottom: @border;
+}
+
+.image-cover-fill() {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.image-contain-fill() {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.text-ellipsis() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.hyperlink() {
+	border-bottom: 1px solid currentColor;
+	color: @gold-text;
+	word-break: break-all;
+	
+	/*&::before {
+		content: "链接";
+	}*/
+}

@@ -1,0 +1,83 @@
+/**
+ * Color palette
+ */
+
+@bg-main:     hsl(0, 0%, 100%);
+@bg-sub:      #f2f2f2;
+@bg-black:    hsl(0, 0%, 0%);
+
+@text-main:   hsl(0, 0%, 20%);
+@text-dark:   hsl(0, 0%, 15%);
+@text-white:  hsl(0, 0%, 100%);
+
+@yellow-main: #ffe050;
+
+@theme: @yellow-main;
+
+
+
+
+/**
+ * Border preset
+ */
+
+@thinline: 1px solid fadeout(@text-main, 85%);
+
+
+
+/**
+ * Font
+ */
+
+/*====== Chinese punctuation optimization ======*/
+@font-face {
+	font-family: "GB Punct Song Body";
+	font-weight: 400;
+	src: local("PingFang SC"), local("PingFang SC Regular"), local("Hiragino Sans GB"), local("Hiragino Sans GB W3"), local("Heiti SC"), local("Heiti SC Light"), local("Microsoft YaHei UI"), local("Microsoft YaHei"), local("SimSun");
+	unicode-range: U+002F, U+2014, U+00B7, U+2026, U+201C, U+201D;
+	/*
+		solidus,
+		em dash,
+		middle dot,
+		ellipsis,
+		left double quotes,
+		right doubel quotes
+	*/
+}
+@font-face {
+	font-family: "GB Punct Song Head";
+	font-weight: 600;
+	src: local("PingFang SC"), local("PingFang SC Regular"), local("Hiragino Sans GB"), local("Hiragino Sans GB W3"), local("Heiti SC"), local("Heiti SC Light"), local("Microsoft YaHei UI"), local("Microsoft YaHei"), local("SimSun");
+	unicode-range: U+002F, U+2014, U+00B7, U+2026, U+201C, U+201D;
+	/*
+		solidus,
+		em dash,
+		middle dot,
+		ellipsis,
+		left double quotes,
+		right doubel quotes
+	*/
+}
+/*====== Chinese punctuation optimization END ======*/
+
+@font-sans-body : myriad-pro, sans-serif;
+@font-serif-body: minion-pro, serif;
+
+@font-hei-body : myriad-pro, source-han-sans-simplified-c, sans-serif;
+@font-song-body: "GB Punct Song Body", minion-pro, source-han-serif-sc, serif;
+@font-song-head: "GB Punct Song Head", minion-pro-subhead, source-han-serif-sc, serif;
+
+/**
+ * Z-index
+ */
+
+@zIndex-0: 0;
+@zIndex-1: 100;
+@zIndex-2: 200;
+@zIndex-3: 300;
+@zIndex-4: 400;
+@zIndex-5: 500;
+@zIndex-6: 600;
+@zIndex-7: 700;
+@zIndex-8: 800;
+@zIndex-9: 900;
