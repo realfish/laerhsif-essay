@@ -33,7 +33,7 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/docs/2019-06-04/index.html",
+		"oAP": "/docs/2019-06-14/index.html",
 		"oF": 3,
 		"oS": 0
 		},
@@ -469,7 +469,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "logo-react",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 597624273.17493796
+	"lastBuiltDate": 597624534.29868603
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
