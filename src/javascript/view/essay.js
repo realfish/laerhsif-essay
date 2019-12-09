@@ -114,6 +114,15 @@ for (let i = 0; i < $allFnMarks.length; i++) {
 			// Toggle (show/hide) the related inline note
 			$allFnItems[i].classList.toggle('is-active');
 		}
+		
+		// Update hash URL without window scrolling
+		let $target = e.target;
+		while ( $target && !$target.matches('.article-body a.fn-mark, body') ) {
+			$target = $target.parentNode;
+		}
+		if ($target && $target.matches('.article-body a.fn-mark')) {
+			history.pushState({}, '', $target.getAttribute('href'));
+		}
 	});
 }
 doc.addEventListener('click', function (e) {
