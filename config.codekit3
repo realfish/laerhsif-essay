@@ -29,10 +29,10 @@
 		"oF": 3,
 		"oS": 0
 		},
-	"/doc": {
+	"/docs": {
 		"ft": 65536,
 		"oA": 1,
-		"oAP": "/docs/doc",
+		"oAP": "/docs",
 		"oF": 0
 		},
 	"/src/assets/han-space.otf": {
@@ -461,7 +461,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "logo-react",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 597333066.42809296
+	"lastBuiltDate": 597588504.12451601
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

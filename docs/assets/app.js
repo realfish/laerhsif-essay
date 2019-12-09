@@ -38,7 +38,7 @@
 
 	  Han(doc.querySelector('.article')).initCond().renderElem().renderHanging().renderJiya().renderHWS().correctBasicBD().substCombLigaWithPUA(); // Positioning footnotes
 
-	  var SCREEN_WIDTH_THRESHOLD = 768;
+	  var SCREEN_WIDTH_THRESHOLD = 896;
 	  var $wrap = doc.querySelector('.article');
 	  var $body = doc.querySelector('.article-body');
 	  var $footnote = doc.querySelector('.article-footnote');
@@ -124,6 +124,17 @@
 	      if (winWidth > SCREEN_WIDTH_THRESHOLD) ; else {
 	        // Toggle (show/hide) the related inline note
 	        $allFnItems[i].classList.toggle('is-active');
+	      } // Update hash URL without window scrolling
+
+
+	      var $target = e.target;
+
+	      while ($target && !$target.matches('.article-body a.fn-mark, body')) {
+	        $target = $target.parentNode;
+	      }
+
+	      if ($target && $target.matches('.article-body a.fn-mark')) {
+	        history.pushState({}, '', $target.getAttribute('href'));
 	      }
 	    });
 	  };
