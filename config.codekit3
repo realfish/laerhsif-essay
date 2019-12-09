@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "31934",
 "files": {
+	"/.gitlab-ci.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/.gitlab-ci.yml",
+		"oF": 1
+		},
 	"/articles/2019-06-14/article.pug": {
 		"cB": 0,
 		"cOD": 0,
@@ -461,7 +469,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "logo-react",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 597588504.12451601
+	"lastBuiltDate": 597624273.17493796
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
