@@ -20,7 +20,7 @@ Han(doc.querySelector('.article'))
 
 
 // Positioning footnotes
-const SCREEN_WIDTH_THRESHOLD = 768;
+const SCREEN_WIDTH_THRESHOLD = 896;
 
 let $wrap       = doc.querySelector('.article');
 let $body       = doc.querySelector('.article-body');
