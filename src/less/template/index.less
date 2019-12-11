@@ -1,0 +1,67 @@
+.index main {
+	position: relative;
+	width   : 100%;
+	height  : 100%;
+}
+
+.index-wrap {
+	position                  : relative;
+	overflow-x                : scroll;
+	-webkit-overflow-scrolling: touch;
+	width                     : 100%;
+	height                    : 100%;
+	padding-left              : 120px;
+	padding-right             : 120px;
+	box-sizing                : border-box;
+}
+
+.index-list {
+	position : relative;
+	top      : 50%;
+	transform: translateY(-50%);
+	display  : inline-flex;
+}
+
+.index-item {
+	position    : relative;
+	height      : 240px;
+	margin-right: (28px + 18);
+	writing-mode: vertical-rl;
+	
+	&:last-of-type {
+		margin-right: 0;
+	}
+	
+	time {
+		position             : absolute;
+		top                  : 0;
+		right                : 0;
+		height               : 6em;
+		// color                : @text-dark;
+		font-family          : @font-serif-body;
+		font-size            : 12px;
+		font-feature-settings: "onum";
+		transform-origin     : top;
+		transform            : translate(-28px, -24px) rotateZ(-120deg);
+		opacity              : .35;
+	}
+
+	h3 {
+		display    : inline-block;
+		font-family: @font-song-body;
+		font-size  : 18px;
+		font-weight: 400;
+		line-height: 26px;
+		hyphens    : none;
+
+		&:not([lang="en"]) {
+			letter-spacing: (1em/6);
+		}
+		&[lang="en"] {
+			font-family          : @font-serif-body;
+			// font-feature-settings: "smcp";
+			letter-spacing       : 0.05em;
+			word-spacing         : 0.125em;
+		}
+	}
+}
