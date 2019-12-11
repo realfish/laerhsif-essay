@@ -24,5 +24,5 @@ export default function () {
 	doc.getElementsByTagName('main')[0].addEventListener('touchstart', function(){});
 
 	// Twist HTML language
-	doc.getElementsByTagName('html')[0].setAttribute('lang', 'en');
+	// doc.getElementsByTagName('html')[0].setAttribute('lang', 'en');
 }
