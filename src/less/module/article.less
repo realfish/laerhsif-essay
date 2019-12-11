@@ -10,6 +10,11 @@
 		padding-bottom: 90px;
 		font-size     : 16px;
 	}
+	
+	cite[lang="zh"] {
+		font-style   : normal;
+		border-bottom: 1px solid currentColor;
+	}
 }
 
 .article-header {
@@ -103,6 +108,24 @@
 		margin-left  : auto;
 		margin-right : auto;
 	}
+	blockquote p {
+		width        : 28em;
+		padding-left : (80px + 72 + 18*2);
+		padding-right: (288px + 72 + 18*2);
+		font-family  : @font-kai-body, serif;
+	}
+	h3 {
+		width         : 576px;
+		padding-left  : (80px + 72);
+		padding-right : (288px + 72);
+		margin-top    : 32px;
+		margin-left   : auto;
+		margin-right  : auto;
+		font-family   : @font-song-head;
+		font-size     : 20px;
+		font-weight   : 600;
+		letter-spacing: 1px;
+	}
 	
 	strong {
 		font-family: @font-hei-body;
@@ -136,6 +159,14 @@
 			padding-left : 0;
 			padding-right: 0;
 		}
+		blockquote p {
+			padding-left : 2em;
+			padding-right: 2em;
+		}
+		h3 {
+			padding-left : 0;
+			padding-right: 0;
+		}
 	}
 	@media screen and (max-width: 640px) {
 		&::after {
@@ -143,6 +174,14 @@
 		}
 		p {
 			width: 24em;
+		}
+		blockquote p {
+			width        : 20em;
+			padding-left : 2em;
+			padding-right: 2em;
+		}
+		h3 {
+			width: 432px;
 		}
 	}
 	@media screen and (max-width: 480px) {
@@ -157,6 +196,14 @@
 		p {
 			width: 22em;
 		}
+		blockquote p {
+			width        : 20em;
+			padding-left : 1em;
+			padding-right: 1em;
+		}
+		h3 {
+			width: 352px;
+		}
 	}
 	@media screen and (max-width: 400px) {
 		&::after {
@@ -165,6 +212,12 @@
 		p {
 			width: 20em;
 		}
+		blockquote p {
+			width: 18em;
+		}
+		h3 {
+			width: 320px;
+		}
 	}
 	@media screen and (max-width: 350px) {
 		&::after {
@@ -172,6 +225,12 @@
 		}
 		p {
 			width: 18em;
+		}
+		blockquote p {
+			width: 16em;
+		}
+		h3 {
+			width: 288px;
 		}
 	}
 }
@@ -254,4 +313,49 @@ ul.article-footnote {
 			width: 20em;
 		}
 	}
+}
+
+ul.article-endnote {
+	width        : (576px - 128);
+	padding-left : (80px + 72 + 128 - 14);
+	padding-right: (288px + 72 + 14);
+	margin-top   : 60px;
+	margin-left  : auto;
+	margin-right : auto;
+	color        : @text-light;
+	font-family  : @font-hei-body;
+	font-size    : 14px;
+	line-height  : 22px;
+
+	li {
+		position  : relative;
+		margin-top: 22px;
+		text-align: justify;
+
+		/* &::before {
+			content   : "※";
+			position  : absolute;
+			left      : -1.5em;
+			top       : -1px;
+			width     : 1em;
+			text-align: right;
+		} */
+	}
+	
+	@media screen and (max-width: 896px) {
+		padding-left : 0;
+		padding-right: 0;
+	}
+	@media screen and (max-width: 640px) {
+		width: 392px;
+	}
+	@media screen and (max-width: 480px) {
+		width: 336px;
+	}
+	@media screen and (max-width: 400px) {
+		width: 280px;
+	}
+	// @media screen and (max-width: 350px) {
+	// 	width: 252px;
+	// }
 }
