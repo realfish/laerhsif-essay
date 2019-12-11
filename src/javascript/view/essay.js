@@ -122,7 +122,10 @@ if ($allFnItems.length > 0 && $allFnMarks.length > 0) {
 				$target = $target.parentNode;
 			}
 			if ($target && $target.matches('.article-body a.fn-mark')) {
-				history.pushState({}, '', $target.getAttribute('href'));
+				let targetHash = $target.getAttribute('href');
+				if (targetHash !== win.location.hash) {
+					history.pushState({}, '', targetHash);
+				}
 			}
 		});
 	}
