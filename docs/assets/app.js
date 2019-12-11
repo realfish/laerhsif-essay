@@ -104,68 +104,70 @@
 	    }
 	  };
 
-	  win.addEventListener('load', function () {
-	    winWidth = win.innerWidth || doc.clientWidth || doc.body.clientWidth;
+	  if ($allFnItems.length > 0 && $allFnMarks.length > 0) {
+	    win.addEventListener('load', function () {
+	      winWidth = win.innerWidth || doc.clientWidth || doc.body.clientWidth;
 
-	    if (winWidth > SCREEN_WIDTH_THRESHOLD) {
-	      fnPositionSide();
-	    } else {
-	      funPositionInline();
+	      if (winWidth > SCREEN_WIDTH_THRESHOLD) {
+	        fnPositionSide();
+	      } else {
+	        funPositionInline();
+	      }
+	    });
+	    win.addEventListener('resize', function () {
+	      winWidth = win.innerWidth || doc.clientWidth || doc.body.clientWidth;
+
+	      if (winWidth > SCREEN_WIDTH_THRESHOLD) {
+	        fnPositionSide();
+	      } else {
+	        funPositionInline();
+	      }
+	    });
+
+	    var _loop = function _loop(i) {
+	      var $crntFnMark = $allFnMarks[i];
+	      $crntFnMark.addEventListener('click', function (e) {
+	        e.preventDefault();
+
+	        if (winWidth > SCREEN_WIDTH_THRESHOLD) ; else {
+	          // Toggle (show/hide) the related inline note
+	          $allFnItems[i].classList.toggle('is-active');
+	        } // Update hash URL without window scrolling
+
+
+	        var $target = e.target;
+
+	        while ($target && !$target.matches('.article-body a.fn-mark, body')) {
+	          $target = $target.parentNode;
+	        }
+
+	        if ($target && $target.matches('.article-body a.fn-mark')) {
+	          history.pushState({}, '', $target.getAttribute('href'));
+	        }
+	      });
+	    };
+
+	    for (var i = 0; i < $allFnMarks.length; i++) {
+	      _loop(i);
 	    }
-	  });
-	  win.addEventListener('resize', function () {
-	    winWidth = win.innerWidth || doc.clientWidth || doc.body.clientWidth;
 
-	    if (winWidth > SCREEN_WIDTH_THRESHOLD) {
-	      fnPositionSide();
-	    } else {
-	      funPositionInline();
-	    }
-	  });
-
-	  var _loop = function _loop(i) {
-	    var $crntFnMark = $allFnMarks[i];
-	    $crntFnMark.addEventListener('click', function (e) {
-	      e.preventDefault();
-
-	      if (winWidth > SCREEN_WIDTH_THRESHOLD) ; else {
-	        // Toggle (show/hide) the related inline note
-	        $allFnItems[i].classList.toggle('is-active');
-	      } // Update hash URL without window scrolling
-
-
+	    doc.addEventListener('click', function (e) {
 	      var $target = e.target;
 
-	      while ($target && !$target.matches('.article-body a.fn-mark, body')) {
+	      while ($target && !$target.matches('.article-footnote li.is-active, .fn-mark, body')) {
 	        $target = $target.parentNode;
 	      }
 
-	      if ($target && $target.matches('.article-body a.fn-mark')) {
-	        history.pushState({}, '', $target.getAttribute('href'));
+	      if (!($target && $target.matches('.article-footnote li.is-active, .fn-mark'))) {
+	        // Click the area apart from notes or marks, hide all active notes
+	        var $allActiveFnItems = doc.querySelectorAll('.article-footnote li.is-active');
+
+	        for (var _i = 0; _i < $allActiveFnItems.length; _i++) {
+	          $allActiveFnItems[_i].classList.remove('is-active');
+	        }
 	      }
 	    });
-	  };
-
-	  for (var i = 0; i < $allFnMarks.length; i++) {
-	    _loop(i);
 	  }
-
-	  doc.addEventListener('click', function (e) {
-	    var $target = e.target;
-
-	    while ($target && !$target.matches('.article-footnote li.is-active, .fn-mark, body')) {
-	      $target = $target.parentNode;
-	    }
-
-	    if (!($target && $target.matches('.article-footnote li.is-active, .fn-mark'))) {
-	      // Click the area apart from notes or marks, hide all active notes
-	      var $allActiveFnItems = doc.querySelectorAll('.article-footnote li.is-active');
-
-	      for (var _i = 0; _i < $allActiveFnItems.length; _i++) {
-	        $allActiveFnItems[_i].classList.remove('is-active');
-	      }
-	    }
-	  });
 	}
 
 	var doc = document; // Misc

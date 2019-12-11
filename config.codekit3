@@ -17,6 +17,66 @@
 		"oAP": "/docs/.gitlab-ci.yml",
 		"oF": 1
 		},
+	"/articles/2017-02-12/tame/article.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/articles/2017-02-12/tame/article.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/articles/2017-02-12/tame/index.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/2017-02-12/tame/index.html",
+		"oF": 3,
+		"oS": 0
+		},
+	"/articles/2017-04-07/article.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/articles/2017-04-07/article.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/articles/2017-04-07/index.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/2017-04-07/index.html",
+		"oF": 3,
+		"oS": 0
+		},
+	"/articles/2017-04-21/article.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/articles/2017-04-21/article.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/articles/2017-04-21/index.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/2017-04-21/index.html",
+		"oF": 3,
+		"oS": 0
+		},
 	"/articles/2019-06-14/article.pug": {
 		"cB": 0,
 		"cOD": 0,
@@ -34,6 +94,26 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/docs/2019-06-14/index.html",
+		"oF": 3,
+		"oS": 0
+		},
+	"/articles/2019-07-10/article.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/articles/2019-07-10/article.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/articles/2019-07-10/index.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/2019-07-10/index.html",
 		"oF": 3,
 		"oS": 0
 		},
@@ -526,7 +606,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "logo-react",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 597724735.59968305
+	"lastBuiltDate": 597762878.15651405
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
