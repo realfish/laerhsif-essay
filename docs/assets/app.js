@@ -27,8 +27,15 @@
 
 	  doc.getElementsByTagName('body')[0].addEventListener('touchstart', function () {});
 	  doc.getElementsByTagName('main')[0].addEventListener('touchstart', function () {}); // Twist HTML language
+	  // doc.getElementsByTagName('html')[0].setAttribute('lang', 'en');
+	}
 
-	  doc.getElementsByTagName('html')[0].setAttribute('lang', 'en');
+	/* global Han */
+	function viewIndex () {
+	  var doc = document; // let win = window;
+	  // Init Han.css
+
+	  Han(doc.querySelector('.index-list')).initCond().renderElem().renderHanging().renderJiya().renderHWS().correctBasicBD().substCombLigaWithPUA();
 	}
 
 	/* global Han */
@@ -168,6 +175,12 @@
 	var view = doc.querySelector('body').classList[0];
 
 	switch (view) {
+	  case 'index':
+	    {
+	      viewIndex();
+	      break;
+	    }
+
 	  case 'essay':
 	    {
 	      viewEssay();

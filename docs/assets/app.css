@@ -578,6 +578,8 @@ h-cs.jinze-outer[hidden] {
 }
 h-char.bd-jiya.bd-open > h-inner {
   margin-left: -0.5em;
+  -webkit-margin-start: -0.5em;
+          margin-inline-start: -0.5em;
 }
 h-char.bd-jiya.bd-close > h-inner,
 h-char.bd-jiya.bd-cop > h-inner,
@@ -604,9 +606,11 @@ h-char.bd-consecutive[unicode="30fb"]:not(.end-portion) {
 }
 h-char.bd-consecutive.bd-liga:not(.end-portion) {
   margin-right: -0.25em;
+  -webkit-margin-end: -0.25em;
+          margin-inline-end: -0.25em;
 }
 h-char.bd-liga[unicode="2014"] {
-  letter-spacing: -0.25px;
+  letter-spacing: -0.35px;
 }
 .article {
   position: relative;
@@ -714,6 +718,9 @@ h-char.bd-liga[unicode="2014"] {
   font-weight: 500;
 }
 .article-body .fn-mark sup {
+  font-family: "Helvetica Neue", Helvetica, "Arial Unicode MS ", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   position: relative;
 }
 .article-body .fn-mark sup::before {
@@ -723,8 +730,8 @@ h-char.bd-liga[unicode="2014"] {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -792,17 +799,26 @@ ul.article-footnote {
 }
 ul.article-footnote li {
   visibility: visible;
-  position: relative;
+  position: absolute;
+  right: 0;
   width: 24em;
   text-align: justify;
+}
+ul.article-footnote p a {
+  text-decoration: underline;
 }
 ul.article-footnote a.fn-mark {
   position: absolute;
   top: 0;
-  left: -16px;
-  width: 8px;
-  font-size: 18px;
+  left: -32px;
+  width: 24px;
   text-align: right;
+}
+ul.article-footnote a.fn-mark sup {
+  font-family: "Helvetica Neue", Helvetica, "Arial Unicode MS ", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  top: -6px;
 }
 @media screen and (max-width: 896px) {
   ul.article-footnote li {
@@ -842,5 +858,72 @@ ul.article-footnote a.fn-mark {
   ul.article-footnote li {
     width: 20em;
   }
+}
+.index main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.index-wrap {
+  position: relative;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  height: 100%;
+  padding-left: 120px;
+  padding-right: 120px;
+  box-sizing: border-box;
+}
+.index-list {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-inline-box;
+  display: inline-flex;
+}
+.index-item {
+  position: relative;
+  height: 240px;
+  margin-right: 46px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+.index-item:last-of-type {
+  margin-right: 0;
+}
+.index-item time {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 6em;
+  font-family: minion-pro, serif;
+  font-size: 12px;
+  -webkit-font-feature-settings: "onum";
+          font-feature-settings: "onum";
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: translate(-28px, -24px) rotateZ(-120deg);
+          transform: translate(-28px, -24px) rotateZ(-120deg);
+  opacity: 0.35;
+}
+.index-item h3 {
+  display: inline-block;
+  font-family: "GB Punct Song Body", minion-pro, source-han-serif-sc, serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+}
+.index-item h3:not([lang="en"]) {
+  letter-spacing: 0.16666667em;
+}
+.index-item h3[lang="en"] {
+  font-family: minion-pro, serif;
+  letter-spacing: 0.05em;
+  word-spacing: 0.125em;
 }
 /*# sourceMappingURL=app.css.map */

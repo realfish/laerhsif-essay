@@ -43,6 +43,16 @@
 		"oAP": "/docs",
 		"oF": 0
 		},
+	"/index/toc.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/index/toc.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/assets/han-space.otf": {
 		"cB": 0,
 		"ft": 8192,
@@ -275,6 +285,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/src/javascript/view/index.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/docs/javascript/view/min/index-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/src/less/_define.less": {
 		"aP": 1,
 		"bl": 0,
@@ -387,6 +408,22 @@
 		"sI": 0,
 		"sU": 1
 		},
+	"/src/less/template/index.less": {
+		"aP": 1,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/docs/less/test/assets/index.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 1
+		},
 	"/src/less/vendor/han.css": {
 		"aP": 0,
 		"bl": 0,
@@ -448,6 +485,26 @@
 		"oAP": "/docs/doc/test/article-sample/index.html",
 		"oF": 3,
 		"oS": 0
+		},
+	"/src/pug/index/index.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/index.html",
+		"oF": 3,
+		"oS": 0
+		},
+	"/src/pug/index/module/list.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/pug/index/module/list.html",
+		"oF": 0,
+		"oS": 0
 		}
 	},
 "hooks": [
@@ -469,7 +526,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "logo-react",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 597624534.29868603
+	"lastBuiltDate": 597724735.59968305
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
