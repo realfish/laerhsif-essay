@@ -141,6 +141,8 @@ h-cs.jinze-outer[hidden] {
 
 h-char.bd-jiya.bd-open>h-inner {
 	margin-left: -.5em;
+	
+	// For vertical layout
 	margin-inline-start: -.5em;
 }
 
@@ -172,11 +174,21 @@ h-char.bd-consecutive[unicode="30fb"]:not(.end-portion) {
 	letter-spacing: -.5em;
 }
 
-h-char.bd-consecutive.bd-liga:not(.end-portion) {
+/* h-char.bd-consecutive.bd-liga:not(.end-portion) {
 	margin-right: -.25em;
+	
+	// For vertical layout
 	margin-inline-end: -.25em;
-}
+} */
 
+
+
+// Fix the gap between `——`
 h-char.bd-liga[unicode="2014"] {
 	letter-spacing: -0.35px;
+}
+
+// Fix the gap between `：「`
+h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
+	display: none;
 }
