@@ -69,6 +69,13 @@
 	}
 }
 
+@font-asterisk: "Helvetica Neue", Helvetica, "Arial Unicode MS ", sans-serif;
+.font-asterisk() {
+	font-family: @font-asterisk;
+	font-weight: 400;
+	font-size  : 16px;
+}
+
 .article-body {
 	margin-top : 120px;
 	font-family: @font-song-body;
@@ -103,16 +110,17 @@
 	}
 	
 	.fn-mark sup {
+		.font-asterisk();
 		position: relative;
 		
 		&::before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: 24px;
-			height: 24px;
+			content    : "";
+			position   : absolute;
+			top        : 50%;
+			left       : 50%;
+			transform  : translate(-50%, -50%);
+			width      : 32px;
+			height     : 32px;
 			user-select: none;
 		}
 		
@@ -181,17 +189,25 @@ ul.article-footnote {
 
 	li {
 		visibility: visible;
-		position  : relative;
+		position  : absolute;
+		right     : 0;
 		width     : 24em;
 		text-align: justify;
 	}
+	p a {
+		text-decoration: underline;
+	}
 	a.fn-mark {
-		position  : absolute;
-		top       : 0;
-		left      : -16px;
-		width     : 8px;
-		font-size : 18px;
-		text-align: right;
+		position   : absolute;
+		top        : 0;
+		left       : -32px;
+		width      : 24px;
+		text-align : right;
+		
+		sup {
+			.font-asterisk();
+			top: -6px;
+		}
 	}
 	
 	@media screen and (max-width: 896px) {
