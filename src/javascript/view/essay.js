@@ -83,63 +83,66 @@ let funPositionInline = function () {
 	}
 };
 
-win.addEventListener('load', function () {
-	winWidth = win.innerWidth || doc.clientWidth || doc.body.clientWidth;
-	
-	if (winWidth > SCREEN_WIDTH_THRESHOLD) {
-		fnPositionSide();
-	} else {
-		funPositionInline();
-	}
-});
-win.addEventListener('resize', function () {
-	winWidth = win.innerWidth || doc.clientWidth || doc.body.clientWidth;
-	
-	if (winWidth > SCREEN_WIDTH_THRESHOLD) {
-		fnPositionSide();
-	} else {
-		funPositionInline();
-	}
-});
-
-for (let i = 0; i < $allFnMarks.length; i++) {
-	let $crntFnMark = $allFnMarks[i];
-	
-	$crntFnMark.addEventListener('click', function (e) {
-		e.preventDefault();
+if ($allFnItems.length > 0 && $allFnMarks.length > 0) {
+	win.addEventListener('load', function () {
+		winWidth = win.innerWidth || doc.clientWidth || doc.body.clientWidth;
 		
 		if (winWidth > SCREEN_WIDTH_THRESHOLD) {
-			// Scroll to the related side note
+			fnPositionSide();
 		} else {
-			// Toggle (show/hide) the related inline note
-			$allFnItems[i].classList.toggle('is-active');
+			funPositionInline();
 		}
+	});
+	win.addEventListener('resize', function () {
+		winWidth = win.innerWidth || doc.clientWidth || doc.body.clientWidth;
 		
-		// Update hash URL without window scrolling
+		if (winWidth > SCREEN_WIDTH_THRESHOLD) {
+			fnPositionSide();
+		} else {
+			funPositionInline();
+		}
+	});
+	
+	for (let i = 0; i < $allFnMarks.length; i++) {
+		let $crntFnMark = $allFnMarks[i];
+		
+		$crntFnMark.addEventListener('click', function (e) {
+			e.preventDefault();
+			
+			if (winWidth > SCREEN_WIDTH_THRESHOLD) {
+				// Scroll to the related side note
+			} else {
+				// Toggle (show/hide) the related inline note
+				$allFnItems[i].classList.toggle('is-active');
+			}
+			
+			// Update hash URL without window scrolling
+			let $target = e.target;
+			while ( $target && !$target.matches('.article-body a.fn-mark, body') ) {
+				$target = $target.parentNode;
+			}
+			if ($target && $target.matches('.article-body a.fn-mark')) {
+				history.pushState({}, '', $target.getAttribute('href'));
+			}
+		});
+	}
+	doc.addEventListener('click', function (e) {
 		let $target = e.target;
-		while ( $target && !$target.matches('.article-body a.fn-mark, body') ) {
+		
+		while ( $target && !$target.matches('.article-footnote li.is-active, .fn-mark, body') ) {
 			$target = $target.parentNode;
 		}
-		if ($target && $target.matches('.article-body a.fn-mark')) {
-			history.pushState({}, '', $target.getAttribute('href'));
+		
+		if ( !($target && $target.matches('.article-footnote li.is-active, .fn-mark')) ) {
+			// Click the area apart from notes or marks, hide all active notes
+			let $allActiveFnItems = doc.querySelectorAll('.article-footnote li.is-active');
+			for (let i = 0; i < $allActiveFnItems.length; i++) {
+				$allActiveFnItems[i].classList.remove('is-active');
+			}
 		}
 	});
 }
-doc.addEventListener('click', function (e) {
-	let $target = e.target;
-	
-	while ( $target && !$target.matches('.article-footnote li.is-active, .fn-mark, body') ) {
-		$target = $target.parentNode;
-	}
-	
-	if ( !($target && $target.matches('.article-footnote li.is-active, .fn-mark')) ) {
-		// Click the area apart from notes or marks, hide all active notes
-		let $allActiveFnItems = doc.querySelectorAll('.article-footnote li.is-active');
-		for (let i = 0; i < $allActiveFnItems.length; i++) {
-			$allActiveFnItems[i].classList.remove('is-active');
-		}
-	}
-});
+
 
 
 }
