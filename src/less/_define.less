@@ -8,6 +8,7 @@
 
 @text-main:   hsl(0, 0%, 20%);
 @text-dark:   hsl(0, 0%, 15%);
+@text-light:  hsl(0, 0%, 50%);
 @text-white:  hsl(0, 0%, 100%);
 
 @yellow-main: #ffe050;
@@ -58,14 +59,29 @@
 		right doubel quotes
 	*/
 }
+@font-face {
+	font-family: "GB Punct Hei Body";
+	font-weight: 400;
+	src: local("PingFang SC"), local("PingFang SC Regular"), local("Hiragino Sans GB"), local("Hiragino Sans GB W3"), local("Heiti SC"), local("Heiti SC Light"), local("Microsoft YaHei UI"), local("Microsoft YaHei"), local("SimSun");
+	unicode-range: U+002F, U+2014, U+00B7, U+2026, U+201C, U+201D;
+	/*
+		solidus,
+		em dash,
+		middle dot,
+		ellipsis,
+		left double quotes,
+		right doubel quotes
+	*/
+}
 /*====== Chinese punctuation optimization END ======*/
 
 @font-sans-body : myriad-pro, sans-serif;
 @font-serif-body: minion-pro, serif;
 
-@font-hei-body : myriad-pro, source-han-sans-simplified-c, sans-serif;
+@font-hei-body : "GB Punct Hei Body", myriad-pro, source-han-sans-simplified-c, sans-serif;
 @font-song-body: "GB Punct Song Body", minion-pro, source-han-serif-sc, serif;
 @font-song-head: "GB Punct Song Head", minion-pro-subhead, source-han-serif-sc, serif;
+@font-kai-body:  "GB Punct Song Head", minion-pro-subhead, adobe-kaiti-std, "Kaiti SC", serif;
 
 /**
  * Z-index
