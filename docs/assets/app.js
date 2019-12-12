@@ -93,7 +93,9 @@
 
 	      if (crntMarkLeft <= bodyWidth / 2) {
 	        $crntItem.style.left = '0px';
+	        $crntItem.style.right = '';
 	      } else {
+	        $crntItem.style.left = '';
 	        $crntItem.style.right = '0px';
 	      }
 
@@ -142,7 +144,11 @@
 	        }
 
 	        if ($target && $target.matches('.article-body a.fn-mark')) {
-	          history.pushState({}, '', $target.getAttribute('href'));
+	          var targetHash = $target.getAttribute('href');
+
+	          if (targetHash !== win.location.hash) {
+	            history.pushState({}, '', targetHash);
+	          }
 	        }
 	      });
 	    };
@@ -167,7 +173,23 @@
 	        }
 	      }
 	    });
-	  }
+	  } // Click endmark to go to Index
+
+
+	  $body.addEventListener('click', function (e) {
+	    winWidth = win.innerWidth || doc.clientWidth || doc.body.clientWidth;
+	    var ENDMARK_H = winWidth > 480 ? 32 : 28;
+	    var clickX = e.offsetX;
+	    var clickY = e.offsetY;
+	    var bodyW = $body.offsetWidth;
+	    var bodyH = $body.offsetHeight;
+	    var bodyPW = $body.querySelector('p').clientWidth;
+
+	    if (clickY <= bodyH && clickY >= bodyH - ENDMARK_H && clickX >= (bodyW - bodyPW) / 2 && clickX <= bodyW - (bodyW - bodyPW) / 2) {
+	      // console.log('bang H & W');
+	      win.location.href = doc.querySelector('body').getAttribute('data-root');
+	    }
+	  });
 	}
 
 	var doc = document; // Misc
