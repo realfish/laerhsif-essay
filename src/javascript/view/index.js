@@ -1,7 +1,7 @@
 /* global Han */
 
 export default function () {
-	
+
 let doc = document;
 // let win = window;
 
