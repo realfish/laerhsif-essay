@@ -47,21 +47,20 @@
 	}
 
 	h3 {
-		display    : inline-block;
-		font-family: @font-song-body;
-		font-size  : 18px;
-		font-weight: 400;
-		line-height: 26px;
-		hyphens    : none;
+		display       : inline-block;
+		font-family   : @font-song-body;
+		font-size     : 18px;
+		font-weight   : 400;
+		letter-spacing: (1em/6);
+		line-height   : 26px;
+		hyphens       : none;
 
-		&:not([lang="en"]) {
-			letter-spacing: (1em/6);
-		}
-		&[lang="en"] {
-			font-family          : @font-serif-body;
+		&:not(:lang(zh)),
+		:not(:lang(zh)) {
+			font-family             : @font-serif-body;
 			// font-feature-settings: "smcp";
-			letter-spacing       : 0.05em;
-			word-spacing         : 0.125em;
+			letter-spacing          : 0.05em;
+			word-spacing            : 0.125em;
 		}
 	}
 }
