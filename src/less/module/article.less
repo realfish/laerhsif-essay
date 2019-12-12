@@ -11,9 +11,13 @@
 		font-size     : 16px;
 	}
 	
-	cite[lang="zh"] {
+	cite:lang(zh) {
 		font-style   : normal;
 		border-bottom: 1px solid currentColor;
+	}
+	a.url {
+		word-break: break-all;
+		hyphens: none;
 	}
 }
 
@@ -82,6 +86,7 @@
 }
 
 .article-body {
+	// position: relative;
 	margin-top : 120px;
 	font-family: @font-song-body;
 	text-align : justify;
@@ -98,6 +103,7 @@
 		margin-right : auto;
 		font-family  : "Zapf Dingbats", sans-serif;
 		font-size    : 32px;
+		cursor       : pointer;
 	}
 	
 	p {
@@ -126,10 +132,38 @@
 		font-weight   : 600;
 		letter-spacing: 1px;
 	}
+	hr {
+		position     : relative;
+		width        : 576px;
+		height       : 1em;
+		padding-left : (80px + 72);
+		padding-right: (288px + 72);
+		margin-top   : (32px);
+		margin-bottom: (32px);
+		margin-left  : auto;
+		margin-right : auto;
+		border       : 0;
+		font-size    : 24px;
+		opacity      : .5;
+		
+		&::after {
+			content    : "* * *";
+			position   : absolute;
+			top        : 0;
+			left       : (80px + 72);
+			font-family: @font-sans-body;
+			line-height: 1;
+		}
+	}
 	
 	strong {
 		font-family: @font-hei-body;
 		font-weight: 500;
+	}
+	em:lang(zh) {
+		font-family: @font-hei-body;
+		font-weight: 400;
+		font-style : normal;
 	}
 	
 	.fn-mark sup {
@@ -167,6 +201,13 @@
 			padding-left : 0;
 			padding-right: 0;
 		}
+		hr {
+			padding-left : 0;
+			padding-right: 0;
+			&::after {
+				left: 0;
+			}
+		}
 	}
 	@media screen and (max-width: 640px) {
 		&::after {
@@ -182,6 +223,13 @@
 		}
 		h3 {
 			width: 432px;
+		}
+		hr {
+			width: 432px;
+			&::after {
+				left     : 50%;
+				transform: translate(-50%);
+			}
 		}
 	}
 	@media screen and (max-width: 480px) {
@@ -202,8 +250,12 @@
 			padding-right: 1em;
 		}
 		h3 {
-			width: 352px;
+			width    : 352px;
 			font-size: 18px;
+		}
+		hr {
+			width    : 352px;
+			font-size: 20px;
 		}
 	}
 	@media screen and (max-width: 400px) {
@@ -217,6 +269,9 @@
 			width: 18em;
 		}
 		h3 {
+			width: 320px;
+		}
+		hr {
 			width: 320px;
 		}
 	}
@@ -233,10 +288,13 @@
 		h3 {
 			width: 288px;
 		}
+		hr {
+			width: 288px;
+		}
 	}
 }
 
-ul.article-footnote {
+.article-footnote {
 	position    : absolute;
 	top         : -999px;
 	right       : -999px;
@@ -255,7 +313,8 @@ ul.article-footnote {
 		text-align: justify;
 	}
 	p a {
-		text-decoration: underline;
+		text-decoration      : underline;
+		text-decoration-style: dotted;
 	}
 	a.fn-mark {
 		position   : absolute;
@@ -316,7 +375,7 @@ ul.article-footnote {
 	}
 }
 
-ul.article-endnote {
+.article-endnote {
 	width        : (576px - 128);
 	padding-left : (80px + 72 + 128 - 14);
 	padding-right: (288px + 72 + 14);
