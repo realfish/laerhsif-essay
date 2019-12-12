@@ -1,7 +1,7 @@
 /* global Han */
 
 export default function () {
-	
+
 let doc = document;
 let win = window;
 
@@ -72,8 +72,10 @@ let funPositionInline = function () {
 		$crntItem.style.top = crntMarkTop + parseInt(pLH, 10) + 'px';
 		
 		if (crntMarkLeft <= bodyWidth / 2) {
-			$crntItem.style.left = '0px';
+			$crntItem.style.left  = '0px';
+			$crntItem.style.right = '';
 		} else {
+			$crntItem.style.left  = '';
 			$crntItem.style.right = '0px';
 		}
 		
@@ -145,6 +147,27 @@ if ($allFnItems.length > 0 && $allFnMarks.length > 0) {
 		}
 	});
 }
+
+
+
+// Click endmark to go to Index
+$body.addEventListener('click', function (e) {
+	winWidth = win.innerWidth || doc.clientWidth || doc.body.clientWidth;
+	
+	const ENDMARK_H = winWidth > 480 ? 32 : 28;
+	
+	let clickX = e.offsetX;
+	let clickY = e.offsetY;
+	let bodyW  = $body.offsetWidth;
+	let bodyH  = $body.offsetHeight;
+	let bodyPW = $body.querySelector('p').clientWidth;
+	
+	if ((clickY <= bodyH && clickY >= bodyH - ENDMARK_H) &&
+	    (clickX >= (bodyW - bodyPW)/2 && clickX <= bodyW - (bodyW - bodyPW)/2)) {
+		// console.log('bang H & W');
+		win.location.href = doc.querySelector('body').getAttribute('data-root');
+	}
+});
 
 
 
