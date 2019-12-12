@@ -15,7 +15,7 @@ html(lang="zh-Hans")
 	block head
 		include _head
 	
-	body(class=(bodyClass + bodyClassModifier))
+	body(class=(bodyClass + bodyClassModifier) data-root=assetsPath)
 		block bodyHeader
 		
 		block bodyMain
