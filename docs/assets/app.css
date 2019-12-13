@@ -317,7 +317,7 @@ template {
  */
 /*====== Chinese punctuation optimization ======*/
 @font-face {
-  font-family: "GB Punct Song Body";
+  font-family: "Punct Song Body";
   font-weight: 400;
   src: local("PingFang SC"), local("PingFang SC Regular"), local("Hiragino Sans GB"), local("Hiragino Sans GB W3"), local("Heiti SC"), local("Heiti SC Light"), local("Microsoft YaHei UI"), local("Microsoft YaHei"), local("SimSun");
   unicode-range: U+002F, U+2014, U+00B7, U+2026, U+201C, U+201D;
@@ -331,7 +331,7 @@ template {
 	*/
 }
 @font-face {
-  font-family: "GB Punct Song Head";
+  font-family: "Punct Song Head";
   font-weight: 600;
   src: local("PingFang SC"), local("PingFang SC Regular"), local("Hiragino Sans GB"), local("Hiragino Sans GB W3"), local("Heiti SC"), local("Heiti SC Light"), local("Microsoft YaHei UI"), local("Microsoft YaHei"), local("SimSun");
   unicode-range: U+002F, U+2014, U+00B7, U+2026, U+201C, U+201D;
@@ -345,7 +345,7 @@ template {
 	*/
 }
 @font-face {
-  font-family: "GB Punct Hei Body";
+  font-family: "Punct Hei Body";
   font-weight: 400;
   src: local("PingFang SC"), local("PingFang SC Regular"), local("Hiragino Sans GB"), local("Hiragino Sans GB W3"), local("Heiti SC"), local("Heiti SC Light"), local("Microsoft YaHei UI"), local("Microsoft YaHei"), local("SimSun");
   unicode-range: U+002F, U+2014, U+00B7, U+2026, U+201C, U+201D;
@@ -648,6 +648,11 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   font-style: normal;
   border-bottom: 1px solid currentColor;
 }
+.article u:lang(zh),
+.article u:lang(jp) {
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
 .article a.url {
   word-break: break-all;
   -webkit-hyphens: none;
@@ -662,7 +667,7 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   margin-left: auto;
   margin-right: auto;
   color: hsl(0, 0%, 15%);
-  font-family: "GB Punct Song Head", minion-pro-subhead, source-han-serif-sc, serif;
+  font-family: "Punct Song Head", minion-pro-subhead, Athelas, "Sitka Text", Times, "Times New Roman", source-han-serif-sc, "Songti SC", NSimSun, SimSun, serif;
 }
 .article-header h1 {
   font-size: 32px;
@@ -670,12 +675,16 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   line-height: 40px;
   letter-spacing: 2px;
 }
+.article-header h1:not(:lang(zh)) {
+  letter-spacing: 0.05em;
+  word-spacing: 0.125em;
+}
 .article-header aside {
   position: absolute;
   top: 6px;
   left: 0;
   width: 80px;
-  font-family: minion-pro, serif;
+  font-family: minion-pro, Athelas, "Sitka Text", Times, "Times New Roman", serif;
   font-size: 12px;
   -webkit-font-feature-settings: 'onum';
           font-feature-settings: 'onum';
@@ -717,7 +726,7 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
 }
 .article-body {
   margin-top: 120px;
-  font-family: "GB Punct Song Body", minion-pro, source-han-serif-sc, serif;
+  font-family: "Punct Song Body", minion-pro, Athelas, "Sitka Text", Times, "Times New Roman", source-han-serif-sc, "Songti SC", NSimSun, SimSun, serif;
   text-align: justify;
   line-height: 32px;
 }
@@ -742,11 +751,22 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   margin-left: auto;
   margin-right: auto;
 }
+.article-body p:not(:lang(zh)) {
+  font-family: minion-pro, Athelas, "Sitka Text", Times, "Times New Roman", serif;
+  line-height: 1.3;
+  text-align: left;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+}
+.article-body blockquote + blockquote {
+  margin-top: 50px;
+}
 .article-body blockquote p {
   width: 28em;
   padding-left: 188px;
   padding-right: 396px;
-  font-family: "GB Punct Song Head", minion-pro, adobe-kaiti-std, "Kaiti SC", serif, serif;
+  font-family: "Punct Song Head", minion-pro, Athelas, "Sitka Text", Times, "Times New Roman", adobe-kaiti-std, "Kaiti SC", KaiTi, serif, serif;
 }
 .article-body h3 {
   width: 576px;
@@ -755,7 +775,7 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   margin-top: 32px;
   margin-left: auto;
   margin-right: auto;
-  font-family: "GB Punct Song Head", minion-pro-subhead, source-han-serif-sc, serif;
+  font-family: "Punct Song Head", minion-pro-subhead, Athelas, "Sitka Text", Times, "Times New Roman", source-han-serif-sc, "Songti SC", NSimSun, SimSun, serif;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -779,17 +799,30 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   position: absolute;
   top: 0;
   left: 152px;
-  font-family: myriad-pro, sans-serif;
+  font-family: myriad-pro, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
   line-height: 1;
 }
 .article-body strong {
-  font-family: "GB Punct Hei Body", myriad-pro, source-han-sans-simplified-c, sans-serif;
+  font-family: "Punct Hei Body", myriad-pro, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, source-han-sans-simplified-c, "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
   font-weight: 500;
 }
 .article-body em:lang(zh) {
-  font-family: "GB Punct Hei Body", myriad-pro, source-han-sans-simplified-c, sans-serif;
+  font-family: "Punct Hei Body", myriad-pro, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, source-han-sans-simplified-c, "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+.article-body code {
+  font-family: fira-mono, Consolas, Menlo, monospace;
+  font-size: 0.9em;
+}
+.article-body a.url {
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+.article-body .fn-mark {
+  padding-left: 2px;
+  padding-right: 2px;
 }
 .article-body .fn-mark sup {
   font-family: "Helvetica Neue", Helvetica, "Arial Unicode MS ", sans-serif;
@@ -810,6 +843,27 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.article-body figure {
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.article-body img {
+  display: block;
+  width: calc(50% + 184px);
+}
+.article-body figcaption {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  margin-left: 48px;
+  color: hsl(0, 0%, 50%);
+}
+.article-body figcaption p {
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0;
+  margin-left: 0;
 }
 @media screen and (max-width: 896px) {
   .article-body::after {
@@ -835,6 +889,15 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   }
   .article-body hr::after {
     left: 0;
+  }
+  .article-body img {
+    width: 100%;
+  }
+  .article-body figcaption {
+    margin-left: 0;
+  }
+  .article-body figcaption p {
+    margin-left: auto;
   }
 }
 @media screen and (max-width: 640px) {
@@ -873,6 +936,14 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   }
   .article-body p {
     width: 22em;
+  }
+  .article-body p:not(:lang(zh)) {
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
+  .article-body blockquote + blockquote {
+    margin-top: 44px;
   }
   .article-body blockquote p {
     width: 20em;
@@ -928,7 +999,7 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   right: -999px;
   height: 0;
   color: hsl(0, 0%, 15%);
-  font-family: "GB Punct Hei Body", myriad-pro, source-han-sans-simplified-c, sans-serif;
+  font-family: "Punct Hei Body", myriad-pro, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, source-han-sans-simplified-c, "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -1005,7 +1076,7 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   margin-left: auto;
   margin-right: auto;
   color: hsl(0, 0%, 50%);
-  font-family: "GB Punct Hei Body", myriad-pro, source-han-sans-simplified-c, sans-serif;
+  font-family: "Punct Hei Body", myriad-pro, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, source-han-sans-simplified-c, "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
   font-size: 14px;
   line-height: 22px;
 }
@@ -1082,7 +1153,7 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   top: 0;
   right: 0;
   height: 6em;
-  font-family: minion-pro, serif;
+  font-family: minion-pro, Athelas, "Sitka Text", Times, "Times New Roman", serif;
   font-size: 12px;
   -webkit-font-feature-settings: "onum";
           font-feature-settings: "onum";
@@ -1094,7 +1165,7 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
 }
 .index-item h3 {
   display: inline-block;
-  font-family: "GB Punct Song Body", minion-pro, source-han-serif-sc, serif;
+  font-family: "Punct Song Body", minion-pro, Athelas, "Sitka Text", Times, "Times New Roman", source-han-serif-sc, "Songti SC", NSimSun, SimSun, serif;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.16666667em;
@@ -1105,7 +1176,7 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
 }
 .index-item h3:not(:lang(zh)),
 .index-item h3 :not(:lang(zh)) {
-  font-family: minion-pro, serif;
+  font-family: minion-pro, Athelas, "Sitka Text", Times, "Times New Roman", serif;
   letter-spacing: 0.05em;
   word-spacing: 0.125em;
 }
