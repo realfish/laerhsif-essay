@@ -15,6 +15,11 @@
 		font-style   : normal;
 		border-bottom: 1px solid currentColor;
 	}
+	u:lang(zh),
+	u:lang(jp) {
+		text-decoration: none;
+		border-bottom  : 1px solid currentColor;
+	}
 	a.url {
 		word-break: break-all;
 		hyphens: none;
@@ -36,6 +41,10 @@
 		font-weight   : 600;
 		line-height   : 40px;
 		letter-spacing: 2px;
+	}
+	h1:not(:lang(zh)) {
+		letter-spacing: 0.05em;
+		word-spacing  : 0.125em;
 	}
 	aside {
 		position             : absolute;
@@ -114,12 +123,23 @@
 		margin-left  : auto;
 		margin-right : auto;
 	}
+	p:not(:lang(zh)) {
+		font-family: @font-serif-body;
+		line-height: 1.3;
+		text-align : left;
+		hyphens    : none;
+	}
+	
+	blockquote + blockquote {
+		margin-top: (32px + 18);
+	}
 	blockquote p {
 		width        : 28em;
 		padding-left : (80px + 72 + 18*2);
 		padding-right: (288px + 72 + 18*2);
 		font-family  : @font-kai-body, serif;
 	}
+	
 	h3 {
 		width         : 576px;
 		padding-left  : (80px + 72);
@@ -132,6 +152,7 @@
 		font-weight   : 600;
 		letter-spacing: 1px;
 	}
+	
 	hr {
 		position     : relative;
 		width        : 576px;
@@ -165,6 +186,14 @@
 		font-weight: 400;
 		font-style : normal;
 	}
+	code {
+		font-family: @font-code;
+		font-size: 0.9em;
+	}
+	a.url {
+		text-decoration      : underline;
+		text-decoration-style: dotted;
+	}
 	
 	.fn-mark sup {
 		.font-asterisk();
@@ -181,6 +210,30 @@
 			user-select: none;
 		}
 		
+	}
+	
+	figure {
+		position: relative;
+		margin-top: 32px;
+		margin-bottom: 32px;
+	}
+	img {
+		// width = (100% - (columnWidth + leftPad + rightPad))/2 + columnWidth + leftPad
+		//       = 50% + columnWidth/2 + leftPad/2 - rightPad/2
+		display: block;
+		width  : calc(50% + 184px);
+	}
+	figcaption {
+		margin-top   : 16px;
+		margin-bottom: 32px;
+		margin-left  : 48px;
+		color        : @text-light;
+	}
+	figcaption p {
+		font-size  : 14px;
+		line-height: 22px;
+		padding    : 0;
+		margin-left: 0;
 	}
 	
 	@media screen and (max-width: 896px) {
@@ -207,6 +260,15 @@
 			&::after {
 				left: 0;
 			}
+		}
+		img {
+			width: 100%;
+		}
+		figcaption {
+			margin-left: 0;
+		}
+		figcaption p {
+			margin-left: auto;
 		}
 	}
 	@media screen and (max-width: 640px) {
@@ -243,6 +305,12 @@
 		}
 		p {
 			width: 22em;
+		}
+		p:not(:lang(zh)) {
+			hyphens: auto;
+		}
+		blockquote + blockquote {
+			margin-top: (28px + 16);
 		}
 		blockquote p {
 			width        : 20em;
