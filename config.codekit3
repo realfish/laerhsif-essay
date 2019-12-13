@@ -17,6 +17,108 @@
 		"oAP": "/docs/.gitlab-ci.yml",
 		"oF": 1
 		},
+	"/articles/2013-08-22/article.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/articles/2013-08-22/article.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/articles/2013-08-22/fig/a-pair-of-shoes.jpg": {
+		"ft": 16384,
+		"iS": 1842919,
+		"jF": 0,
+		"oA": 2,
+		"oAP": "/docs/2013-08-22/fig/a-pair-of-shoes.jpg",
+		"oF": 3,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/articles/2013-08-22/index.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/2013-08-22/index.html",
+		"oF": 3,
+		"oS": 0
+		},
+	"/articles/2013-10-10/article.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/articles/2013-10-10/article.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/articles/2013-10-10/index.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/2013-10-10/index.html",
+		"oF": 3,
+		"oS": 0
+		},
+	"/articles/2013-10-25/article.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/articles/2013-10-25/article.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/articles/2013-10-25/index.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/2013-10-25/index.html",
+		"oF": 3,
+		"oS": 0
+		},
+	"/articles/2014-01-09/article.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/articles/2014-01-09/article.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/articles/2014-01-09/fig/ellipsis-and-em-dash.jpg": {
+		"ft": 16384,
+		"iS": 355382,
+		"jF": 0,
+		"oA": 2,
+		"oAP": "/docs/2014-01-09/fig/ellipsis-and-em-dash.jpg",
+		"oF": 3,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/articles/2014-01-09/index.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/2014-01-09/index.html",
+		"oF": 3,
+		"oS": 0
+		},
 	"/articles/2014-01-25/article.pug": {
 		"cB": 0,
 		"cOD": 0,
@@ -734,7 +836,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "logo-react",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 597854983.32962203
+	"lastBuiltDate": 597958466.2119
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
