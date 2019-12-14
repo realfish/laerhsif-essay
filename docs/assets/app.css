@@ -654,10 +654,12 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   border-bottom: 1px solid currentColor;
 }
 .article a.url {
+  font-size: 12px;
   word-break: break-all;
   -webkit-hyphens: none;
       -ms-hyphens: none;
           hyphens: none;
+  opacity: 0.5;
 }
 .article-header {
   position: relative;
@@ -667,7 +669,7 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   margin-left: auto;
   margin-right: auto;
   color: hsl(0, 0%, 15%);
-  font-family: "Punct Song Head", minion-pro-subhead, Athelas, "Sitka Text", Times, "Times New Roman", source-han-serif-sc, "Songti SC", NSimSun, SimSun, serif;
+  font-family: "Punct Song Head", minion-pro-subhead, Athelas, "Sitka Text", Times, "Times New Roman", source-han-serif-sc, "Songti SC", "STSongti-SC-Black", NSimSun, SimSun, serif;
 }
 .article-header h1 {
   font-size: 32px;
@@ -775,7 +777,7 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   margin-top: 32px;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Punct Song Head", minion-pro-subhead, Athelas, "Sitka Text", Times, "Times New Roman", source-han-serif-sc, "Songti SC", NSimSun, SimSun, serif;
+  font-family: "Punct Song Head", minion-pro-subhead, Athelas, "Sitka Text", Times, "Times New Roman", source-han-serif-sc, "Songti SC", "STSongti-SC-Black", NSimSun, SimSun, serif;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -1084,14 +1086,27 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   position: relative;
   margin-top: 22px;
   text-align: justify;
-  /* &::before {
-			content   : "※";
-			position  : absolute;
-			left      : -1.5em;
-			top       : -1px;
-			width     : 1em;
-			text-align: right;
-		} */
+}
+.article-endnote li::before {
+  content: "•";
+  position: absolute;
+  left: -1.5em;
+  top: -2px;
+  width: 1em;
+  text-align: right;
+}
+.article-endnote li:not(:lang(zh)) {
+  font-family: myriad-pro, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  line-height: 20px;
+  text-align: left;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+}
+.article-endnote li a {
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
 }
 @media screen and (max-width: 896px) {
   .article-endnote {
@@ -1107,6 +1122,11 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
 @media screen and (max-width: 480px) {
   .article-endnote {
     width: 336px;
+  }
+  .article-endnote li:not(:lang(zh)) {
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
   }
 }
 @media screen and (max-width: 400px) {

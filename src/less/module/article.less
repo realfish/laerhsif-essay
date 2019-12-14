@@ -21,8 +21,10 @@
 		border-bottom  : 1px solid currentColor;
 	}
 	a.url {
+		font-size : 12px;
 		word-break: break-all;
-		hyphens: none;
+		hyphens   : none;
+		opacity   : .5;
 	}
 }
 
@@ -464,14 +466,25 @@
 		margin-top: 22px;
 		text-align: justify;
 
-		/* &::before {
-			content   : "※";
+		&::before {
+			// content   : "※";
+			content   : "•";
 			position  : absolute;
 			left      : -1.5em;
-			top       : -1px;
+			top       : -2px;
 			width     : 1em;
 			text-align: right;
-		} */
+		}
+	}
+	li:not(:lang(zh)) {
+		font-family: @font-sans-body;
+		line-height: 20px;
+		text-align : left;
+		hyphens    : none;
+	}
+	li a {
+		text-decoration      : underline;
+		text-decoration-style: dotted;
 	}
 	
 	@media screen and (max-width: 896px) {
@@ -483,6 +496,10 @@
 	}
 	@media screen and (max-width: 480px) {
 		width: 336px;
+		
+		li:not(:lang(zh)) {
+			hyphens: auto;
+		}
 	}
 	@media screen and (max-width: 400px) {
 		width: 280px;
