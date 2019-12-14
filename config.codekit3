@@ -17,6 +17,37 @@
 		"oAP": "/docs/.gitlab-ci.yml",
 		"oF": 1
 		},
+	"/articles/2013-08-20/article.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/articles/2013-08-20/article.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/articles/2013-08-20/fig/galaxy-soho.jpg": {
+		"ft": 16384,
+		"iS": 659642,
+		"jF": 0,
+		"oA": 2,
+		"oAP": "/docs/2013-08-20/fig/galaxy-soho.jpg",
+		"oF": 3,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/articles/2013-08-20/index.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/2013-08-20/index.html",
+		"oF": 3,
+		"oS": 0
+		},
 	"/articles/2013-08-22/article.pug": {
 		"cB": 0,
 		"cOD": 0,
@@ -836,7 +867,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "logo-react",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 597958466.2119
+	"lastBuiltDate": 598047614.60811806
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
