@@ -319,8 +319,8 @@ template {
 @font-face {
   font-family: "Punct Song Body";
   font-weight: 400;
-  src: local("PingFang SC"), local("PingFang SC Regular"), local("Hiragino Sans GB"), local("Hiragino Sans GB W3"), local("Heiti SC"), local("Heiti SC Light"), local("Microsoft YaHei UI"), local("Microsoft YaHei"), local("SimSun");
-  unicode-range: U+002F, U+2014, U+00B7, U+2026, U+201C, U+201D;
+  src: local("STSongti-SC-Regular"), local("PingFang SC"), local("PingFang SC Regular"), local("Heiti SC"), local("Microsoft YaHei UI"), local("Microsoft YaHei"), local("SimSun");
+  unicode-range: U+002F, U+2014, /* U+00B7, */ U+2026, U+201C, U+201D;
   /*
 		solidus,
 		em dash,
@@ -333,8 +333,8 @@ template {
 @font-face {
   font-family: "Punct Song Head";
   font-weight: 600;
-  src: local("PingFang SC"), local("PingFang SC Regular"), local("Hiragino Sans GB"), local("Hiragino Sans GB W3"), local("Heiti SC"), local("Heiti SC Light"), local("Microsoft YaHei UI"), local("Microsoft YaHei"), local("SimSun");
-  unicode-range: U+002F, U+2014, U+00B7, U+2026, U+201C, U+201D;
+  src: local("STSongti-SC-Black"), local("PingFang SC"), local("PingFang SC Regular"), local("Heiti SC"), local("NSimSun"), local("SimSun");
+  unicode-range: U+002F, U+2014, /* U+00B7, */ U+2026, U+201C, U+201D;
   /*
 		solidus,
 		em dash,
@@ -347,8 +347,22 @@ template {
 @font-face {
   font-family: "Punct Hei Body";
   font-weight: 400;
-  src: local("PingFang SC"), local("PingFang SC Regular"), local("Hiragino Sans GB"), local("Hiragino Sans GB W3"), local("Heiti SC"), local("Heiti SC Light"), local("Microsoft YaHei UI"), local("Microsoft YaHei"), local("SimSun");
-  unicode-range: U+002F, U+2014, U+00B7, U+2026, U+201C, U+201D;
+  src: local("PingFang SC"), local("PingFang SC Regular"), local("Hiragino Sans GB"), local("Hiragino Sans GB W3"), local("Heiti SC"), local("Microsoft YaHei UI"), local("Microsoft YaHei"), local("NSimSun"), local("SimSun");
+  unicode-range: U+002F, U+2014, /* U+00B7, */ U+2026, U+201C, U+201D;
+  /*
+		solidus,
+		em dash,
+		middle dot,
+		ellipsis,
+		left double quotes,
+		right doubel quotes
+	*/
+}
+@font-face {
+  font-family: "Punct Kai Body";
+  font-weight: 400;
+  src: local("Kait SC"), local("STSongti-SC-Regular"), local("PingFang SC"), local("PingFang SC Regular"), local("KaiTi"), local("NSimSun"), local("SimSun");
+  unicode-range: U+002F, U+2014, /* U+00B7, */ U+2026, U+201C, U+201D;
   /*
 		solidus,
 		em dash,
@@ -630,6 +644,16 @@ h-char.bd-liga[unicode="2014"] {
 h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   display: none;
 }
+h-char[unicode="b7"] {
+  position: relative;
+  z-index: -100;
+  display: inline-block;
+  width: 0.5em;
+  text-align: center;
+}
+h-char[unicode="b7"] h-inner {
+  font-family: source-han-serif-sc, "PingFang SC", sans-serif;
+}
 .article {
   position: relative;
   padding-top: 120px;
@@ -669,7 +693,7 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   margin-left: auto;
   margin-right: auto;
   color: hsl(0, 0%, 15%);
-  font-family: "Punct Song Head", minion-pro-subhead, Athelas, "Sitka Text", Times, "Times New Roman", source-han-serif-sc, "Songti SC", "STSongti-SC-Black", NSimSun, SimSun, serif;
+  font-family: "Punct Song Head", minion-pro-subhead, Athelas, "Sitka Text", Times, "Times New Roman", source-han-serif-sc, "STSongti-SC-Black", NSimSun, SimSun, serif;
 }
 .article-header h1 {
   font-size: 32px;
@@ -677,7 +701,9 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   line-height: 40px;
   letter-spacing: 2px;
 }
-.article-header h1:not(:lang(zh)) {
+.article-header h1:not(:lang(zh)),
+.article-header h1 :not(:lang(zh)) {
+  font-family: minion-pro-subhead, Athelas, "Sitka Text", Times, "Times New Roman", serif;
   letter-spacing: 0.05em;
   word-spacing: 0.125em;
 }
@@ -745,7 +771,8 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   font-size: 32px;
   cursor: pointer;
 }
-.article-body p {
+.article-body p,
+.article-body ul {
   width: 32em;
   padding-left: 152px;
   padding-right: 360px;
@@ -753,13 +780,30 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   margin-left: auto;
   margin-right: auto;
 }
-.article-body p:not(:lang(zh)) {
+.article-body p:not(:lang(zh)),
+.article-body ul:not(:lang(zh)) {
   font-family: minion-pro, Athelas, "Sitka Text", Times, "Times New Roman", serif;
   line-height: 1.3;
   text-align: left;
   -webkit-hyphens: none;
       -ms-hyphens: none;
           hyphens: none;
+}
+.article-body ul li {
+  position: relative;
+  margin-left: 2em;
+  margin-top: 0.5em;
+}
+.article-body ul li::before {
+  content: "•";
+  position: absolute;
+  left: -1.5em;
+  top: -2px;
+  width: 1em;
+  text-align: right;
+}
+.article-body ul li:not(:lang(zh))::before {
+  top: -1px;
 }
 .article-body blockquote + blockquote {
   margin-top: 50px;
@@ -768,7 +812,15 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   width: 28em;
   padding-left: 188px;
   padding-right: 396px;
-  font-family: "Punct Song Head", minion-pro, Athelas, "Sitka Text", Times, "Times New Roman", adobe-kaiti-std, "Kaiti SC", KaiTi, serif, serif;
+  font-family: "Punct Kai Body", minion-pro, Athelas, "Sitka Text", Times, "Times New Roman", adobe-kaiti-std, "Kaiti SC", KaiTi, serif, serif;
+}
+.article-body blockquote p:not(:lang(zh)) {
+  font-style: italic;
+}
+.article-body blockquote p:not(:lang(zh)) i,
+.article-body blockquote p:not(:lang(zh)) em,
+.article-body blockquote p:not(:lang(zh)) cite {
+  font-style: normal;
 }
 .article-body h3 {
   width: 576px;
@@ -777,7 +829,7 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   margin-top: 32px;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Punct Song Head", minion-pro-subhead, Athelas, "Sitka Text", Times, "Times New Roman", source-han-serif-sc, "Songti SC", "STSongti-SC-Black", NSimSun, SimSun, serif;
+  font-family: "Punct Song Head", minion-pro-subhead, Athelas, "Sitka Text", Times, "Times New Roman", source-han-serif-sc, "STSongti-SC-Black", NSimSun, SimSun, serif;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -873,7 +925,8 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
     padding-right: 0;
     text-align: center;
   }
-  .article-body p {
+  .article-body p,
+  .article-body ul {
     padding-left: 0;
     padding-right: 0;
   }
@@ -906,8 +959,12 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   .article-body::after {
     width: 432px;
   }
-  .article-body p {
+  .article-body p,
+  .article-body ul {
     width: 24em;
+  }
+  .article-body ul li {
+    margin-left: 0;
   }
   .article-body blockquote p {
     width: 20em;
@@ -936,7 +993,8 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
     margin-top: 48px;
     font-size: 28px;
   }
-  .article-body p {
+  .article-body p,
+  .article-body ul {
     width: 22em;
   }
   .article-body p:not(:lang(zh)) {
@@ -965,7 +1023,8 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   .article-body::after {
     width: 320px;
   }
-  .article-body p {
+  .article-body p,
+  .article-body ul {
     width: 20em;
   }
   .article-body blockquote p {
@@ -982,7 +1041,8 @@ h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
   .article-body::after {
     width: 288px;
   }
-  .article-body p {
+  .article-body p,
+  .article-body ul {
     width: 18em;
   }
   .article-body blockquote p {
