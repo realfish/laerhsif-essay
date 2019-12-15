@@ -192,3 +192,23 @@ h-char.bd-liga[unicode="2014"] {
 h-char.bd-consecutive[unicode="ff1a"] + h-char.bd-jiya.bd-open:before {
 	display: none;
 }
+
+// Fix the font and width of `·`
+h-char[unicode="b7"] {
+	position      : relative;
+	z-index       : -@zIndex-1;
+	display       : inline-block;
+	width         : 0.5em;
+	text-align    : center;
+	// line-height   : inherit;
+
+	h-inner {
+		// position   : relative;
+		// left       : 50%;
+		// transform  : translateX(-50%);
+		// display    : inline-block;
+		// width      : 1em;
+		font-family: source-han-serif-sc, "PingFang SC", sans-serif;
+		// text-align : center;
+	}
+}
