@@ -1,9 +1,13 @@
 .article {
 	position      : relative;
+	min-width     : 1088px;
 	padding-top   : 120px;
 	padding-bottom: 120px;
 	font-size     : 18px;
 	
+	@media screen and (max-width: 896px) {
+		min-width: unset;
+	}
 	@media screen and (max-width: 480px) {
 		min-width     : 320px;
 		padding-top   : 60px;
@@ -98,6 +102,7 @@
 	font-family: @font-asterisk;
 	font-weight: 400;
 	font-size  : 16px;
+	font-style : normal;
 }
 
 .article-body {
@@ -273,6 +278,15 @@
 		line-height: 22px;
 		padding    : 0;
 		margin-left: 0;
+	}
+	
+	ruby > rt {
+		font-family: @font-hei-body;
+		font-size: 10px;
+		
+		a.url {
+			font-size: inherit;
+		}
 	}
 	
 	@media screen and (max-width: 896px) {
