@@ -14,8 +14,8 @@ Han(doc.querySelector('.article'))
 .renderHanging()
 .renderJiya()
 .renderHWS()
-.correctBasicBD()
-.substCombLigaWithPUA();
+/* .correctBasicBD() */
+/* .substCombLigaWithPUA() */;
 
 
 
