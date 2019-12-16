@@ -1,0 +1,40 @@
+extends ../_template
+
+block var
+	- const assetsPath = "./"
+	- const pageTitl = "404 Not Found" + ""
+	- const bodyClass = "http404"
+	- const bodyClassModifier = ""
+	//--- Data
+
+block headScripts
+	script(async).
+		/* Source Han Serif */
+		(function(d) {
+			var config = {
+				kitId: 'rlr5ajp',
+				scriptTimeout: 3000,
+				async: true
+			},
+			h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+		
+		/* Source Han Sans */
+		(function(d) {
+			var config = {
+				kitId: 'xpj4jdz',
+				scriptTimeout: 3000,
+				async: true
+			},
+			h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	//- include data/gon
+
+block mainBody
+	header.http404-pageheader
+		code 404 Not Found
+	include ../../../articles/2019-12-16/article
+
+block bodyFooter
+
+block dotTemplate
