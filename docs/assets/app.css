@@ -656,9 +656,15 @@ h-char[unicode="b7"] h-inner {
 }
 .article {
   position: relative;
+  min-width: 1088px;
   padding-top: 120px;
   padding-bottom: 120px;
   font-size: 18px;
+}
+@media screen and (max-width: 896px) {
+  .article {
+    min-width: unset;
+  }
 }
 @media screen and (max-width: 480px) {
   .article {
@@ -882,6 +888,7 @@ h-char[unicode="b7"] h-inner {
   font-family: "Helvetica Neue", Helvetica, "Arial Unicode MS ", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  font-style: normal;
   position: relative;
 }
 .article-body .fn-mark sup::before {
@@ -918,6 +925,13 @@ h-char[unicode="b7"] h-inner {
   line-height: 22px;
   padding: 0;
   margin-left: 0;
+}
+.article-body ruby > rt {
+  font-family: "Punct Hei Body", myriad-pro, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, source-han-sans-simplified-c, "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  font-size: 10px;
+}
+.article-body ruby > rt a.url {
+  font-size: inherit;
 }
 @media screen and (max-width: 896px) {
   .article-body::after {
@@ -1091,6 +1105,7 @@ h-char[unicode="b7"] h-inner {
   font-family: "Helvetica Neue", Helvetica, "Arial Unicode MS ", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  font-style: normal;
   top: -6px;
 }
 @media screen and (max-width: 896px) {
