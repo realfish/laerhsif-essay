@@ -67,15 +67,15 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"/articles/2013-08-07/fig/SMTH.jpg": {
+	"/articles/2013-08-07/fig/smth.jpg": {
 		"ft": 16384,
 		"iS": 180530,
 		"jF": 0,
 		"oA": 2,
-		"oAP": "/docs/2013-08-07/fig/SMTH.jpg",
+		"oAP": "/docs/2013-08-07/fig/smth.jpg",
 		"oF": 3,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/articles/2013-08-07/index.pug": {
@@ -1066,7 +1066,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "logo-react",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 598211390.42815101
+	"lastBuiltDate": 598212316.17738402
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
