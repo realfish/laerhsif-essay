@@ -31,11 +31,44 @@
 	}
 
 	/* global Han */
+	function viewHttp404 () {
+	  var doc = document;
+	  var win = window; // Init Han.css
+
+	  Han(doc.querySelector('.article')).initCond().renderElem().renderHanging().renderJiya().renderHWS()
+	  /* .correctBasicBD() */
+
+	  /* .substCombLigaWithPUA() */
+	  ; // Click endmark to go to Index
+
+	  var $body = doc.querySelector('.article-body');
+	  var winWidth;
+	  $body.addEventListener('click', function (e) {
+	    winWidth = win.innerWidth || doc.clientWidth || doc.body.clientWidth;
+	    var ENDMARK_H = winWidth > 480 ? 32 : 28;
+	    var clickX = e.offsetX;
+	    var clickY = e.offsetY;
+	    var bodyW = $body.offsetWidth;
+	    var bodyH = $body.offsetHeight;
+	    var bodyPW = $body.querySelector('p').clientWidth;
+
+	    if (clickY <= bodyH && clickY >= bodyH - ENDMARK_H && clickX >= (bodyW - bodyPW) / 2 && clickX <= bodyW - (bodyW - bodyPW) / 2) {
+	      // console.log('bang H & W');
+	      win.location.href = doc.querySelector('body').getAttribute('data-root');
+	    }
+	  });
+	}
+
+	/* global Han */
 	function viewIndex () {
 	  var doc = document; // let win = window;
 	  // Init Han.css
 
-	  Han(doc.querySelector('.index-list')).initCond().renderElem().renderHanging().renderJiya().renderHWS().correctBasicBD().substCombLigaWithPUA();
+	  Han(doc.querySelector('.index-list')).initCond().renderElem().renderHanging().renderJiya().renderHWS()
+	  /* .correctBasicBD() */
+
+	  /* .substCombLigaWithPUA() */
+	  ;
 	}
 
 	/* global Han */
@@ -43,7 +76,11 @@
 	  var doc = document;
 	  var win = window; // Init Han.css
 
-	  Han(doc.querySelector('.article')).initCond().renderElem().renderHanging().renderJiya().renderHWS().correctBasicBD().substCombLigaWithPUA(); // Positioning footnotes
+	  Han(doc.querySelector('.article')).initCond().renderElem().renderHanging().renderJiya().renderHWS()
+	  /* .correctBasicBD() */
+
+	  /* .substCombLigaWithPUA() */
+	  ; // Positioning footnotes
 
 	  var SCREEN_WIDTH_THRESHOLD = 896;
 	  var $wrap = doc.querySelector('.article');
@@ -199,6 +236,12 @@
 	var view = doc.querySelector('body').classList[0];
 
 	switch (view) {
+	  case 'http404':
+	    {
+	      viewHttp404();
+	      break;
+	    }
+
 	  case 'index':
 	    {
 	      viewIndex();

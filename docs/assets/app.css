@@ -943,7 +943,9 @@ h-char[unicode="b7"] h-inner {
     padding-right: 0;
   }
   .article-body hr::after {
-    left: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
   }
   .article-body img {
     width: 100%;
@@ -1193,6 +1195,107 @@ h-char[unicode="b7"] h-inner {
   .article-endnote {
     width: 280px;
   }
+}
+@media screen and (max-width: 480px) {
+  .http404 .article {
+    padding-top: 72px;
+  }
+}
+.http404 .article-header {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.http404 .article-header aside {
+  position: static;
+  top: unset;
+  left: unset;
+  width: auto;
+  margin-top: 1em;
+  text-align: center;
+}
+.http404 .article-body::after {
+  text-align: center;
+}
+.http404 .article-body::after,
+.http404 .article-body p,
+.http404 .article-body hr {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.http404 .article-body hr::after {
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.http404 .article-footer .article-endnote {
+  width: 504px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.http404 .article-footer .article-endnote p {
+  margin-top: 1em;
+  text-align: justify;
+}
+.http404 .article-footer .article-endnote code {
+  font-family: fira-mono, Consolas, Menlo, monospace;
+}
+.http404 .article-footer .article-endnote a {
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+@media screen and (max-width: 640px) {
+  .http404 .article-footer .article-endnote {
+    width: 392px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .http404 .article-footer .article-endnote {
+    width: 336px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .http404 .article-footer .article-endnote {
+    width: 294px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .http404 .article-footer .article-endnote {
+    width: 280px;
+  }
+}
+.http404-pageheader {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-width: 320px;
+  height: 12px;
+  padding-top: 1em;
+  color: hsl(0, 0%, 50%);
+  font-size: 12px;
+  text-align: center;
+}
+.http404-pageheader::before {
+  content: "";
+  z-index: -100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, hsl(0, 0%, 100%)), color-stop(55%, hsla(0, 0%, 100%, 0.95)), color-stop(75%, hsla(0, 0%, 100%, 0.75)), color-stop(85%, hsla(0, 0%, 100%, 0.25)), to(hsla(0, 0%, 100%, 0)));
+  background-image: -webkit-linear-gradient(top, hsl(0, 0%, 100%) 25%, hsla(0, 0%, 100%, 0.95) 55%, hsla(0, 0%, 100%, 0.75) 75%, hsla(0, 0%, 100%, 0.25) 85%, hsla(0, 0%, 100%, 0) 100%);
+  background-image: linear-gradient(to bottom, hsl(0, 0%, 100%) 25%, hsla(0, 0%, 100%, 0.95) 55%, hsla(0, 0%, 100%, 0.75) 75%, hsla(0, 0%, 100%, 0.25) 85%, hsla(0, 0%, 100%, 0) 100%);
+}
+.http404-pageheader code {
+  font-family: fira-mono, Consolas, Menlo, monospace;
 }
 .index main {
   position: relative;
