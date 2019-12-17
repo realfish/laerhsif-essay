@@ -126,7 +126,9 @@ if ($allFnItems.length > 0 && $allFnMarks.length > 0) {
 			if ($target && $target.matches('.article-body a.fn-mark')) {
 				let targetHash = $target.getAttribute('href');
 				if (targetHash !== win.location.hash) {
-					history.pushState({}, '', targetHash);
+					// history.pushState({}, '', targetHash);
+					// Update hash URL without refreshing window or adding history state
+					history.replaceState({}, '', targetHash);
 				}
 			}
 		});
