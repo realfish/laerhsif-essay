@@ -20,8 +20,8 @@ export default function () {
 	}
 
 	// Enable the CSS `:active` interactions
-	doc.getElementsByTagName('body')[0].addEventListener('touchstart', function(){});
-	doc.getElementsByTagName('main')[0].addEventListener('touchstart', function(){});
+	doc.getElementsByTagName('body')[0].addEventListener('touchstart', function(){}, {passive: true});
+	doc.getElementsByTagName('main')[0].addEventListener('touchstart', function(){}, {passive: true});
 
 	// Twist HTML language
 	// doc.getElementsByTagName('html')[0].setAttribute('lang', 'en');

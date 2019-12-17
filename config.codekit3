@@ -132,24 +132,24 @@
 	"/articles/2013-08-13/fig/nude-descending-a-staircase-no2.jpg": {
 		"ft": 16384,
 		"iS": 680100,
-		"jF": 0,
-		"oA": 2,
+		"jF": 2,
+		"oA": 0,
 		"oAP": "/docs/2013-08-13/fig/nude-descending-a-staircase-no2.jpg",
 		"oF": 3,
 		"oIPL": 0,
-		"opt": 0,
-		"q": 100
+		"opt": 1,
+		"q": 80
 		},
 	"/articles/2013-08-13/fig/woman-walking-downstairs.jpg": {
 		"ft": 16384,
 		"iS": 440327,
-		"jF": 0,
-		"oA": 2,
+		"jF": 2,
+		"oA": 0,
 		"oAP": "/docs/2013-08-13/fig/woman-walking-downstairs.jpg",
 		"oF": 3,
 		"oIPL": 0,
-		"opt": 0,
-		"q": 100
+		"opt": 1,
+		"q": 60
 		},
 	"/articles/2013-08-13/index.pug": {
 		"cB": 0,
@@ -174,13 +174,13 @@
 	"/articles/2013-08-20/fig/galaxy-soho.jpg": {
 		"ft": 16384,
 		"iS": 659642,
-		"jF": 0,
-		"oA": 2,
+		"jF": 2,
+		"oA": 0,
 		"oAP": "/docs/2013-08-20/fig/galaxy-soho.jpg",
 		"oF": 3,
 		"oIPL": 0,
-		"opt": 0,
-		"q": 100
+		"opt": 1,
+		"q": 80
 		},
 	"/articles/2013-08-20/index.pug": {
 		"cB": 0,
@@ -205,13 +205,13 @@
 	"/articles/2013-08-22/fig/a-pair-of-shoes.jpg": {
 		"ft": 16384,
 		"iS": 1842919,
-		"jF": 0,
-		"oA": 2,
+		"jF": 2,
+		"oA": 0,
 		"oAP": "/docs/2013-08-22/fig/a-pair-of-shoes.jpg",
 		"oF": 3,
 		"oIPL": 0,
 		"opt": 1,
-		"q": 100
+		"q": 80
 		},
 	"/articles/2013-08-22/index.pug": {
 		"cB": 0,
@@ -532,6 +532,25 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/CHANGELOG.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/CHANGELOG.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"/docs": {
 		"ft": 65536,
 		"oA": 1,
@@ -692,8 +711,8 @@
 	"/src/javascript/app.js": {
 		"bF": 4,
 		"ft": 64,
-		"ma": 1,
-		"mi": 0,
+		"ma": 0,
+		"mi": 1,
 		"oA": 0,
 		"oAP": "/docs/assets/app.js",
 		"oF": 3,
@@ -729,6 +748,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/docs/javascript/polyfill/min/customEvent-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/javascript/polyfill/dom4.max.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/docs/javascript/polyfill/min/dom4.max-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -848,12 +878,12 @@
 		"eJ": 0,
 		"ft": 1,
 		"iI": 0,
-		"ma": 1,
+		"ma": 0,
 		"mS": 0,
 		"oA": 0,
 		"oAP": "/docs/assets/app.css",
 		"oF": 2,
-		"oS": 0,
+		"oS": 1,
 		"rwU": 0,
 		"sI": 0,
 		"sU": 1
@@ -1066,7 +1096,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "logo-react",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 598212316.17738402
+	"lastBuiltDate": 598279368.53228796
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
