@@ -77,36 +77,33 @@
 }
 
 .http404-pageheader {
-	position: fixed;
-	z-index: @zIndex-1;
-	top: 0;
-	left: 0;
-	right: 0;
-	min-width: 320px;
-	height: 12px;
+	position   : fixed;
+	z-index    : @zIndex-1;
+	top        : 0;
+	left       : 0;
+	right      : 0;
+	height     : 12px;
 	padding-top: 1em;
-	color: @text-light;
-	font-size: 12px;
-	text-align: center;
-	
+	color      : @text-light;
+	font-size  : 12px;
+	text-align : center;
+
 	&::before {
-		content: "";
-		z-index: -@zIndex-1;
+		content : "";
+		z-index : -@zIndex-1;
 		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 72px;
-		background-image: linear-gradient(
-			to bottom,
-			fadeout(@bg-main, 0%) 25%,
-			fadeout(@bg-main, 5%) 55%,
-			fadeout(@bg-main, 25%) 75%,
-			fadeout(@bg-main, 75%) 85%,
-			fadeout(@bg-main, 100%) 100%
-		);
+		top     : 0;
+		left    : 0;
+		right   : 0;
+		height  : 72px;
+		background-image: linear-gradient(to bottom,
+				fadeout(@bg-main, 0%) 25%,
+				fadeout(@bg-main, 5%) 55%,
+				fadeout(@bg-main, 25%) 75%,
+				fadeout(@bg-main, 75%) 85%,
+				fadeout(@bg-main, 100%) 100%);
 	}
-	
+
 	code {
 		font-family: @font-code;
 	}
