@@ -124,7 +124,8 @@ if ($allFnItems.length > 0 && $allFnMarks.length > 0) {
 				$target = $target.parentNode;
 			}
 			if ($target && $target.matches('.article-body a.fn-mark')) {
-				let targetHash = $target.getAttribute('href');
+				// let targetHash = $target.getAttribute('href');
+				let targetHash = '#' + $target.getAttribute('id');
 				if (targetHash !== win.location.hash) {
 					// history.pushState({}, '', targetHash);
 					// Update hash URL without refreshing window or adding history state
