@@ -1,7 +1,17 @@
 CHANGELOG
 =========
 
-### [v1.1.1][1.1.0] (2019-12-21)
+### [v1.2.0][1.2.0] (2019-12-22)
+
+#### Changed
+* Correct `font-familiy` for serveral types of Latin script inline elements in the article body.
+* Testbench:
+	- <https://poisson.laerhsif.com/2013-08-11/?v=1.2.0>
+	- <https://poisson.laerhsif.com/2013-10-10/?v=1.2.0>
+
+* * *
+
+### [v1.1.1][1.1.1] (2019-12-21)
 
 #### Fixed
 - Fix `dom4.max.js` comments for `libs.js`.
@@ -35,6 +45,7 @@ Release the first version. Testbench: <https://poisson.laerhsif.com/?v=1.0.0>
 
 
 
+[1.2.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.1.1...v1.2.0
 [1.1.1]:         https://github.com/realfish/laerhsif-essay/compare/v1.1.0...v1.1.1
 [1.1.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.0.1...v1.1.0
 [1.0.1]:         https://github.com/realfish/laerhsif-essay/compare/v1.0.0...v1.0.1

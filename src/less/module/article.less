@@ -236,6 +236,16 @@
 		text-decoration-style: dotted;
 	}
 	
+	a,
+	cite,
+	em,
+	span,
+	u {
+		&:not(:lang(zh)):not(:lang(jp)) {
+			font-family: @font-serif-body;
+		}
+	}
+	
 	.fn-mark {
 		padding-left:  2px;
 		padding-right: 2px;
