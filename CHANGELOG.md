@@ -1,6 +1,23 @@
 CHANGELOG
 =========
 
+### [v1.3.0][1.3.0] (2019-12-25)
+
+#### Added
++ Add favicon.
++ Add 4 Apple touch icons & 2 Android icons.
++ Add the footer module into the Index page.
+
+#### Changed
+* Update the `-webkit-touch-callout` strategy of `<a>` for better interaction on touch devices like iOS devices.
+
+#### Fixed
+- Fix the value of `apple-mobile-web-app-title` meta.
+
+Testbench: <https://poisson.laerhsif.com/?v=1.3.0>
+
+* * *
+
 ### [v1.2.0][1.2.0] (2019-12-22)
 
 #### Changed
@@ -45,6 +62,7 @@ Release the first version. Testbench: <https://poisson.laerhsif.com/?v=1.0.0>
 
 
 
+[1.3.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.2.0...v1.3.0
 [1.2.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.1.1...v1.2.0
 [1.1.1]:         https://github.com/realfish/laerhsif-essay/compare/v1.1.0...v1.1.1
 [1.1.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.0.1...v1.1.0

@@ -10,6 +10,7 @@
 	-webkit-overflow-scrolling: touch;
 	width                     : 100%;
 	height                    : 100%;
+	min-height                : 360px;
 	padding-left              : 120px;
 	padding-right             : 120px;
 	box-sizing                : border-box;
@@ -62,5 +63,76 @@
 			letter-spacing          : 0.05em;
 			word-spacing            : 0.125em;
 		}
+	}
+}
+
+.index-footer {
+	position      : fixed;
+	left          : 0;
+	right         : 0;
+	bottom        : 0;
+	bottom        : calc(constant(safe-area-inset-bottom)/2);
+	bottom        : calc(env(safe-area-inset-bottom)/2);
+	display       : flex;
+	padding-left  : 24px;
+	padding-bottom: 24px;
+	pointer-events: none;
+}
+.index-footer-item {
+	position             : relative;
+	display              : block;
+	width                : 6px;
+	height               : 6px;
+	border               : 9px solid transparent;
+	background-color     : @text-dark;
+	background-clip      : content-box;
+	pointer-events       : auto;
+	-webkit-touch-callout: none;
+}
+.index-footer-item-detail {
+	position        : absolute;
+	z-index         : @zIndex-1;
+	left            : 8px;
+	top             : 50%;
+	padding-left    : .5em;
+	padding-right   : .5em;
+	border-radius   : 3px;
+	background-color: @text-dark;
+	color           : @text-white;
+	font-family     : @font-sans-body;
+	font-size       : 12px;
+	line-height     : 24px;
+	white-space     : nowrap;
+	opacity         : 0;
+	pointer-events  : none;
+	user-select     : none;
+	transform       : translateY(-50%);
+	transition      :
+		opacity   .15s ease,
+		transform .25s ease;
+	will-change:
+		opacity,
+		transform;
+
+	.ua-Pointer .index-footer-item:hover &,
+	.index-footer-item:active & {
+		opacity  : 1;
+		transform: translateY(-50%) translateX(12px);
+		transition:
+			opacity   .25s ease,
+			transform .25s ease;
+	}
+
+	&::before {
+		content         : "";
+		position        : absolute;
+		top             : 50%;
+		left            : -3px;
+		z-index         : -100;
+		display         : inline-block;
+		width           : 8px;
+		height          : 8px;
+		background-color: @text-dark;
+		transform       : translateY(-50%) rotateZ(45deg);
 	}
 }
