@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "31934",
 "files": {
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/.gitignore",
+		"oF": 1
+		},
 	"/.gitlab-ci.yml": {
 		"cB": 0,
 		"ft": 8192,
@@ -551,6 +559,12 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/design": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/docs/design",
+		"oF": 0
+		},
 	"/docs": {
 		"ft": 65536,
 		"oA": 1,
@@ -566,6 +580,80 @@
 		"oAP": "/docs/index/toc.html",
 		"oF": 0,
 		"oS": 0
+		},
+	"/src/assets/android-touch-icon-hd.png": {
+		"ft": 32768,
+		"iS": 5749,
+		"oA": 2,
+		"oAP": "/docs/assets/android-touch-icon-hd.png",
+		"oF": 1,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/android-touch-icon.png": {
+		"ft": 32768,
+		"iS": 3537,
+		"oA": 2,
+		"oAP": "/docs/assets/android-touch-icon.png",
+		"oF": 1,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/apple-touch-icon-ipad-retina.png": {
+		"ft": 32768,
+		"iS": 5009,
+		"oA": 2,
+		"oAP": "/docs/assets/apple-touch-icon-ipad-retina.png",
+		"oF": 1,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/apple-touch-icon-ipad.png": {
+		"ft": 32768,
+		"iS": 4460,
+		"oA": 2,
+		"oAP": "/docs/assets/apple-touch-icon-ipad.png",
+		"oF": 1,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/apple-touch-icon-iphone-retina.png": {
+		"ft": 32768,
+		"iS": 5293,
+		"oA": 2,
+		"oAP": "/docs/assets/apple-touch-icon-iphone-retina.png",
+		"oF": 1,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/apple-touch-icon.png": {
+		"ft": 32768,
+		"iS": 3315,
+		"oA": 2,
+		"oAP": "/docs/assets/apple-touch-icon.png",
+		"oF": 1,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/docs/assets/favicon.ico",
+		"oF": 0
 		},
 	"/src/assets/han-space.otf": {
 		"cB": 0,
@@ -1066,6 +1154,16 @@
 		"oF": 3,
 		"oS": 0
 		},
+	"/src/pug/index/module/footer.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/pug/index/module/footer.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/index/module/list.pug": {
 		"cB": 0,
 		"cOD": 0,
@@ -1092,11 +1190,11 @@
 	},
 "projectAttributes": {
 	"creationDate": 499867116,
-	"displayValue": "realfish-Essay",
+	"displayValue": "laerhsif-essay",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "logo-react",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 598650002.32395196
+	"lastBuiltDate": 599056495.19702196
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -3134,7 +3232,7 @@
 	"rollupExternals": "",
 	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
 	"rollupTreeshakingEnabled": 1,
-	"skippedFoldersString": "_cache, cache, /html/achievement/data, /html/exam/data, /html/frontmatter/data, /html/index/data, /html/lesson/data, /html/membership/data, /html/textbook/data, log, _logs, logs, node_modules, /src/pug/_dot, /storage/framework/sessions, /test, /[v0.4.0], /[v0.2.0]",
+	"skippedFoldersString": "_cache, cache, /html/achievement/data, /html/exam/data, /html/frontmatter/data, /html/index/data, /html/lesson/data, /html/membership/data, /html/textbook/data, log, _logs, logs, node_modules, /src/pug/_dot, /storage/framework/sessions, /test, /[v0.4.0], /[v0.2.0], /design",
 	"sourceFolderName": "src",
 	"susyVersion": 3,
 	"tsAllowSyntheticDefaultImports": 0,
