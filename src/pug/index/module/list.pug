@@ -76,7 +76,7 @@
 .index-wrap
 	ul.index-list(lang="zh-Hans")
 		each item in _data
-			li.index-item
+			li.index-item.is-loading
 				a(href=item.url)
 					time= item.date
 					h3(lang=item.lang)!= item.title
