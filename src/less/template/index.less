@@ -7,6 +7,7 @@
 .index-wrap {
 	position                  : relative;
 	overflow-x                : scroll;
+	overflow-y                : hidden;
 	-webkit-overflow-scrolling: touch;
 	width                     : 100%;
 	height                    : 100%;
@@ -28,6 +29,8 @@
 	height      : 240px;
 	margin-right: (28px + 18);
 	writing-mode: vertical-rl;
+	transform   : translate3d(0, 0, 0);
+	transition  : transform .25s ease-out;
 	
 	&:last-of-type {
 		margin-right: 0;
@@ -45,11 +48,13 @@
 		transform-origin     : top;
 		transform            : translate(-28px, -24px) rotateZ(-120deg);
 		opacity              : .35;
+		transition           : transform .35s ease .25s;
 	}
 
 	h3 {
 		display       : inline-block;
 		font-family   : @font-song-body;
+		// font-family   : @font-serif-body;
 		font-size     : 18px;
 		font-weight   : 400;
 		letter-spacing: (1em/6);
@@ -63,6 +68,16 @@
 			letter-spacing          : 0.05em;
 			word-spacing            : 0.125em;
 		}
+	}
+}
+.index-item.is-loading {
+	transform: translate3d(0, 100vh, 0);
+	
+	time {
+		transform: translate(-4px, -72px) rotateZ(0deg);
+	}
+	h3 {
+		font-family: @font-serif-body;
 	}
 }
 

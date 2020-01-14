@@ -1,6 +1,20 @@
 CHANGELOG
 =========
 
+### [v1.4.0][1.4.0] (2020-01-14)
+
+#### Added
++ Attach loading transitions for TOC. Testbench: <https://poisson.laerhsif.com/?v=1.4.0>
+
+#### Changed
+* Refine the non-zh & non-jp footnote mark's vertical setting. Testbench: <https://poisson.laerhsif.com/2012-09-27/#fn-mark-1?v=1.4.0>
+* Update the `strong:lang(zh)` style in `blockquote`. Testbench: <https://poisson.laerhsif.com/2020-01-14/?v=1.4.0>
+
+#### Fixed
+- Fix the statement of var `bodyClassModifier`.
+
+* * *
+
 ### [v1.3.0][1.3.0] (2019-12-25)
 
 #### Added
@@ -62,6 +76,7 @@ Release the first version. Testbench: <https://poisson.laerhsif.com/?v=1.0.0>
 
 
 
+[1.4.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.3.0...v1.4.0
 [1.3.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.2.0...v1.3.0
 [1.2.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.1.1...v1.2.0
 [1.1.1]:         https://github.com/realfish/laerhsif-essay/compare/v1.1.0...v1.1.1

@@ -221,6 +221,15 @@
 		font-family: @font-hei-body;
 		font-weight: 500;
 	}
+	@supports (text-emphasis: circle) or (-webkit-text-emphasis: circle) {
+		blockquote strong:lang(zh) {
+			font-family           : inherit;
+			font-weight           : 400;
+			text-emphasis         : filled circle;
+			text-emphasis-position: under;
+		}
+	}
+	
 	em:lang(zh) {
 		font-family: @font-hei-body;
 		font-weight: 400;
@@ -266,6 +275,9 @@
 			user-select: none;
 		}
 		
+		&:not(:lang(zh)):not(:lang(jp)) {
+			top: -0.25em;
+		}
 	}
 	
 	figure {
@@ -400,6 +412,9 @@
 		}
 		code {
 			font-size: 15px;
+		}
+		.fn-mark sup:not(:lang(zh)):not(:lang(jp)) {
+			top: -0.125em;
 		}
 	}
 	@media screen and (max-width: 400px) {
