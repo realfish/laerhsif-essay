@@ -266,6 +266,9 @@
 			user-select: none;
 		}
 		
+		&:not(:lang(zh)):not(:lang(jp)) {
+			top: -0.25em;
+		}
 	}
 	
 	figure {
@@ -400,6 +403,9 @@
 		}
 		code {
 			font-size: 15px;
+		}
+		.fn-mark sup:not(:lang(zh)):not(:lang(jp)) {
+			top: -0.125em;
 		}
 	}
 	@media screen and (max-width: 400px) {
