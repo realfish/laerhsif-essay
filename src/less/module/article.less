@@ -221,6 +221,15 @@
 		font-family: @font-hei-body;
 		font-weight: 500;
 	}
+	@supports (text-emphasis: circle) or (-webkit-text-emphasis: circle) {
+		blockquote strong:lang(zh) {
+			font-family           : inherit;
+			font-weight           : 400;
+			text-emphasis         : filled circle;
+			text-emphasis-position: under;
+		}
+	}
+	
 	em:lang(zh) {
 		font-family: @font-hei-body;
 		font-weight: 400;
