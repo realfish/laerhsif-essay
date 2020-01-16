@@ -1,0 +1,35 @@
+doctype xml
+
+-
+	const channelPubDate  = (new Date).toUTCString();
+	const channelDomain   = 'https://poisson.laerhsif.com';
+	const channelLanguage = 'zh-Hans';
+	const channelDocs     = 'https://cyber.harvard.edu/rss/rss.html';
+
+rss(
+	version="2.0"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+)
+	channel
+		title 鱼缸
+		description Essays by realfish
+		link= channelDomain
+		atom:link(href="https://poisson.laerhsif.com/feed/rss.xml" rel="self" type="application/rss+xml")/
+		
+		pubDate= channelPubDate
+		language= channelLanguage
+		docs= channelDocs
+		
+		include ../../../index/toc
+		each item in dataToc
+			item
+				//- Ref: https://stackoverflow.com/a/5002161/3253041
+				- let itemTitle = item.title.replace(/<\/?[^>]+(>|$)/g, "");
+				- let itemLink  = channelDomain + item.url.slice(1);
+				- let itemDate  = (new Date(item.date)).toUTCString();
+				//- title!= `<![CDATA[` + item.title + `]]>`
+				title= itemTitle
+				link= itemLink
+				guid(isPermaLink="true")= itemLink
+				pubDate= itemDate
+				description!= `<![CDATA[<p>` + itemTitle + `<br><a href="${itemLink}">` + itemLink + `</a></p>]]>`
