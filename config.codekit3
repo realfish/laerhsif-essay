@@ -1164,6 +1164,16 @@
 		"oF": 3,
 		"oS": 0
 		},
+	"/src/pug/feed/sitemap.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/feed/sitemap.xml",
+		"oF": 3,
+		"oS": 0
+		},
 	"/src/pug/index/index.pug": {
 		"cB": 0,
 		"cOD": 0,
@@ -1214,7 +1224,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "logo-react",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 600699729.85665905
+	"lastBuiltDate": 600866513.69943595
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
