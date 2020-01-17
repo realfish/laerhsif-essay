@@ -69,7 +69,7 @@ let fnPositionInlineAll = function () {
 		let $crntMark     = $allFnMarks[i];
 		let crntMarkTop   = $crntMark.offsetTop;
 		let crntMarkLeft  = $crntMark.offsetLeft;
-		let crntMarkWidth = $crntMark.clientWidth;
+		let crntMarkWidth = $crntMark.offsetWidth;
 		
 		$crntItem.style.top = crntMarkTop + parseInt(pLH, 10) + 'px';
 		
