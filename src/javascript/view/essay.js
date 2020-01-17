@@ -29,7 +29,7 @@ let $allFnItems = doc.querySelectorAll('.article-footnote li');
 let $allFnMarks = doc.querySelectorAll('.article-body .fn-mark');
 let wrapTop, bodyWidth, bodyPLeft, bodyPWidth, winWidth;
 
-let fnPositionSide = function () {
+let fnPositionSideAll = function () {
 	wrapTop    = $wrap.offsetTop;
 	bodyWidth  = $body.offsetWidth;
 	bodyPLeft  = $body.querySelector('p').offsetLeft;
@@ -49,7 +49,7 @@ let fnPositionSide = function () {
 		$crntItem.style.setProperty('--arrow-left', '');
 	}
 };
-let funPositionInline = function () {
+/* let fnPositionInlineAll = function () {
 	wrapTop    = $wrap.offsetTop;
 	bodyWidth  = $body.offsetWidth;
 	bodyPLeft  = $body.querySelector('p').offsetLeft;
@@ -83,6 +83,39 @@ let funPositionInline = function () {
 		let arrowLeft = crntMarkLeft - (crntItemLeft + (bodyWidth - bodyPWidth)/2);
 		$crntItem.style.setProperty('--arrow-left', arrowLeft - 2 + 'px');
 	}
+}; */
+let fnPositionInline = function (index) {
+	wrapTop    = $wrap.offsetTop;
+	bodyWidth  = $body.offsetWidth;
+	bodyPLeft  = $body.querySelector('p').offsetLeft;
+	bodyPWidth = $body.querySelector('p').offsetWidth;
+	
+	$footnote.style.top   = wrapTop + 'px';
+	$footnote.style.right = bodyWidth - bodyPLeft - bodyPWidth + 'px';
+	$footnote.style.width = bodyPWidth + 'px';
+	
+	// Compute the line-height of <p>
+	let pLH = win.getComputedStyle(doc.querySelector('.article-body p')).getPropertyValue('line-height');
+	pLH = pLH.substring(0, pLH.length - 2);
+	
+	let $crntItem    = $allFnItems[index];
+	let $crntMark    = $allFnMarks[index];
+	let crntMarkTop  = $crntMark.offsetTop;
+	let crntMarkLeft = $crntMark.offsetLeft;
+	
+	$crntItem.style.top = crntMarkTop + parseInt(pLH, 10) + 'px';
+	
+	if (crntMarkLeft <= bodyWidth / 2) {
+		$crntItem.style.left  = '0px';
+		$crntItem.style.right = '';
+	} else {
+		$crntItem.style.left  = '';
+		$crntItem.style.right = '0px';
+	}
+	
+	let crntItemLeft = $crntItem.offsetLeft;	// This value is updated by above settings
+	let arrowLeft = crntMarkLeft - (crntItemLeft + (bodyWidth - bodyPWidth)/2);
+	$crntItem.style.setProperty('--arrow-left', arrowLeft - 2 + 'px');
 };
 
 if ($allFnItems.length > 0 && $allFnMarks.length > 0) {
@@ -90,19 +123,19 @@ if ($allFnItems.length > 0 && $allFnMarks.length > 0) {
 		winWidth = win.innerWidth || doc.clientWidth || doc.body.clientWidth;
 		
 		if (winWidth > SCREEN_WIDTH_THRESHOLD) {
-			fnPositionSide();
-		} else {
-			funPositionInline();
-		}
+			fnPositionSideAll();
+		}/*  else {
+			fnPositionInlineAll();
+		} */
 	});
 	win.addEventListener('resize', function () {
 		winWidth = win.innerWidth || doc.clientWidth || doc.body.clientWidth;
 		
 		if (winWidth > SCREEN_WIDTH_THRESHOLD) {
-			fnPositionSide();
-		} else {
-			funPositionInline();
-		}
+			fnPositionSideAll();
+		}/*  else {
+			fnPositionInlineAll();
+		} */
 	});
 	
 	for (let i = 0; i < $allFnMarks.length; i++) {
@@ -114,6 +147,8 @@ if ($allFnItems.length > 0 && $allFnMarks.length > 0) {
 			if (winWidth > SCREEN_WIDTH_THRESHOLD) {
 				// Scroll to the related side note
 			} else {
+				// Positioning the current inline note
+				fnPositionInline(i);
 				// Toggle (show/hide) the related inline note
 				$allFnItems[i].classList.toggle('is-active');
 			}
