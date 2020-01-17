@@ -9,7 +9,9 @@ CHANGELOG
 #### Changed
 * Update inline footnote’s positioning logic:
 	* Position the certain inline footnote every time when its mark is clicked.
+	* Refine the positioning for the inline note bubble's arrow.
 	* Rename `fnPositionSide` into `fnPositionSideAll`.
+	* Rename the previous `fnPositionInline` into `fnPositionInlineAll`.
 	* Testbench: <https://poisson.laerhsif.com/2020-01-14/?v=1.6.0>
 
 * * *
