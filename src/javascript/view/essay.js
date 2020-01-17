@@ -21,6 +21,7 @@ Han(doc.querySelector('.article'))
 
 // Positioning footnotes
 const SCREEN_WIDTH_THRESHOLD = 896;
+const ARROW_LEFT_TUNING      = -4;
 
 let $wrap       = doc.querySelector('.article');
 let $body       = doc.querySelector('.article-body');
@@ -49,7 +50,7 @@ let fnPositionSideAll = function () {
 		$crntItem.style.setProperty('--arrow-left', '');
 	}
 };
-/* let fnPositionInlineAll = function () {
+let fnPositionInlineAll = function () {
 	wrapTop    = $wrap.offsetTop;
 	bodyWidth  = $body.offsetWidth;
 	bodyPLeft  = $body.querySelector('p').offsetLeft;
@@ -64,10 +65,11 @@ let fnPositionSideAll = function () {
 	pLH = pLH.substring(0, pLH.length - 2);
 	
 	for (let i = 0; i < $allFnItems.length; i++) {
-		let $crntItem    = $allFnItems[i];
-		let $crntMark    = $allFnMarks[i];
-		let crntMarkTop  = $crntMark.offsetTop;
-		let crntMarkLeft = $crntMark.offsetLeft;
+		let $crntItem     = $allFnItems[i];
+		let $crntMark     = $allFnMarks[i];
+		let crntMarkTop   = $crntMark.offsetTop;
+		let crntMarkLeft  = $crntMark.offsetLeft;
+		let crntMarkWidth = $crntMark.clientWidth;
 		
 		$crntItem.style.top = crntMarkTop + parseInt(pLH, 10) + 'px';
 		
@@ -80,10 +82,10 @@ let fnPositionSideAll = function () {
 		}
 		
 		let crntItemLeft = $crntItem.offsetLeft;	// This value is updated by above settings
-		let arrowLeft = crntMarkLeft - (crntItemLeft + (bodyWidth - bodyPWidth)/2);
+		let arrowLeft = crntMarkLeft - (crntItemLeft + (bodyWidth - bodyPWidth)/2) + crntMarkWidth/2 + ARROW_LEFT_TUNING;
 		$crntItem.style.setProperty('--arrow-left', arrowLeft - 2 + 'px');
 	}
-}; */
+};
 let fnPositionInline = function (index) {
 	wrapTop    = $wrap.offsetTop;
 	bodyWidth  = $body.offsetWidth;
@@ -98,10 +100,11 @@ let fnPositionInline = function (index) {
 	let pLH = win.getComputedStyle(doc.querySelector('.article-body p')).getPropertyValue('line-height');
 	pLH = pLH.substring(0, pLH.length - 2);
 	
-	let $crntItem    = $allFnItems[index];
-	let $crntMark    = $allFnMarks[index];
-	let crntMarkTop  = $crntMark.offsetTop;
-	let crntMarkLeft = $crntMark.offsetLeft;
+	let $crntItem     = $allFnItems[index];
+	let $crntMark     = $allFnMarks[index];
+	let crntMarkTop   = $crntMark.offsetTop;
+	let crntMarkLeft  = $crntMark.offsetLeft;
+	let crntMarkWidth = $crntMark.offsetWidth;
 	
 	$crntItem.style.top = crntMarkTop + parseInt(pLH, 10) + 'px';
 	
@@ -114,7 +117,7 @@ let fnPositionInline = function (index) {
 	}
 	
 	let crntItemLeft = $crntItem.offsetLeft;	// This value is updated by above settings
-	let arrowLeft = crntMarkLeft - (crntItemLeft + (bodyWidth - bodyPWidth)/2);
+	let arrowLeft = crntMarkLeft - (crntItemLeft + (bodyWidth - bodyPWidth)/2) + crntMarkWidth/2 + ARROW_LEFT_TUNING;
 	$crntItem.style.setProperty('--arrow-left', arrowLeft - 2 + 'px');
 };
 
@@ -133,9 +136,9 @@ if ($allFnItems.length > 0 && $allFnMarks.length > 0) {
 		
 		if (winWidth > SCREEN_WIDTH_THRESHOLD) {
 			fnPositionSideAll();
-		}/*  else {
+		} else {
 			fnPositionInlineAll();
-		} */
+		}
 	});
 	
 	for (let i = 0; i < $allFnMarks.length; i++) {
