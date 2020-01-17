@@ -1,6 +1,19 @@
 CHANGELOG
 =========
 
+### [v1.6.0][1.6.0] (2020-01-17)
+
+#### Added
++ Add the 404 page into sitemap. Testbench: <https://poisson.laerhsif.com/feed/sitemap.xml?v=1.6.0>
+
+#### Changed
+* Update inline footnote’s positioning logic:
+	* Position the certain inline footnote every time when its mark is clicked.
+	* Rename `fnPositionSide` into `fnPositionSideAll`.
+	* Testbench: <https://poisson.laerhsif.com/2020-01-14/?v=1.6.0>
+
+* * *
+
 ### [v1.5.1][1.5.1] (2020-01-16)
 
 #### Fixed
@@ -90,6 +103,7 @@ Release the first version. Testbench: <https://poisson.laerhsif.com/?v=1.0.0>
 
 
 
+[1.6.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.5.1...v1.6.0
 [1.5.1]:         https://github.com/realfish/laerhsif-essay/compare/v1.5.0...v1.5.1
 [1.5.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.4.0...v1.5.0
 [1.4.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.3.0...v1.4.0
