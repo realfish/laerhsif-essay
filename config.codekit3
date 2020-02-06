@@ -560,6 +560,26 @@
 		"oF": 3,
 		"oS": 0
 		},
+	"/articles/2020-02-06/article.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/articles/2020-02-06/article.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/articles/2020-02-06/index.pug": {
+		"cB": 0,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/2020-02-06/index.html",
+		"oF": 3,
+		"oS": 0
+		},
 	"/CHANGELOG.md": {
 		"cB": 0,
 		"cS": 0,
@@ -1224,7 +1244,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "logo-react",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 600938755.14418697
+	"lastBuiltDate": 602676308.27843106
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
