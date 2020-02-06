@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+### [v1.7.0][1.7.0] (2020-02-06)
+
+#### Added
++ Improve SEO for the RSS feed sitemap.
+
+* * *
+
 ### [v1.6.1][1.6.1] (2020-01-17)
 
 #### Fixed
@@ -112,6 +119,7 @@ Release the first version. Testbench: <https://poisson.laerhsif.com/?v=1.0.0>
 
 
 
+[1.7.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.6.1...v1.7.0
 [1.6.1]:         https://github.com/realfish/laerhsif-essay/compare/v1.6.0...v1.6.1
 [1.6.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.5.1...v1.6.0
 [1.5.1]:         https://github.com/realfish/laerhsif-essay/compare/v1.5.0...v1.5.1

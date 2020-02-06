@@ -1,5 +1,5 @@
 -
-	var verTag = "1.6.1"
+	var verTag = "1.7.0"
 	var viewport = "width=device-width, viewport-fit=cover"
 		//- + ",height=device-height"
 		+ ",initial-scale=1.0"
@@ -34,7 +34,7 @@ head
 	
 	link(rel="shortcut icon" href=`${assetsPath}assets/favicon.ico?v=${verTag}`)
 
-	link(rel="alternate" type="application/rss+xml" title="鱼缸" href=`${assetsPath}feed/sitemap.xml`)
+	link(rel="alternate" type="application/rss+xml" title="鱼缸" href=`${assetsPath}feed/sitemap.xml?v=${verTag}`)
 
 	//- link(rel="preload" href=`${assetsPath}assets/han.woff2?v3.3.0` as="font" crossorigin="anonymous")
 	link(rel="stylesheet" href=`${assetsPath}assets/app.css?v=${verTag}`)
