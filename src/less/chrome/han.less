@@ -214,3 +214,9 @@ h-char[unicode="b7"] {
 		// text-align : center;
 	}
 }
+
+// Fix the gap between `！ + .bd-close` + `？ + .bd-close`
+h-char[unicode="ff01"] + h-char.bd-close,
+h-char[unicode="ff1f"] + h-char.bd-close {
+	margin-left: -0.5em;
+}
