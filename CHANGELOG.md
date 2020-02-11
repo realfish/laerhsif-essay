@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+### [v1.8.0][1.8.0] (2020-02-11)
+
+#### Changed
+* Fix the gap between `！ + .bd-close` + `？ + .bd-close`.
+
+* * *
+
 ### [v1.7.0][1.7.0] (2020-02-06)
 
 #### Added
@@ -119,6 +126,7 @@ Release the first version. Testbench: <https://poisson.laerhsif.com/?v=1.0.0>
 
 
 
+[1.8.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.7.0...v1.8.0
 [1.7.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.6.1...v1.7.0
 [1.6.1]:         https://github.com/realfish/laerhsif-essay/compare/v1.6.0...v1.6.1
 [1.6.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.5.1...v1.6.0
