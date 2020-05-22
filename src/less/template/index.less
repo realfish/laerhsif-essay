@@ -4,6 +4,8 @@
 	height  : 100%;
 }
 
+// Layout for mordern UAs without IE 11
+html:not(.ua-Trident) {
 .index-wrap {
 	position                  : relative;
 	overflow-x                : scroll;
@@ -78,6 +80,53 @@
 	}
 	h3 {
 		font-family: @font-serif-body;
+	}
+}
+}
+
+// Layout for IE 11
+html.ua-Trident {
+	.index-list {
+		width  : 420px;
+		padding: 40vh 1em 40vh 90px;
+		margin : 0 auto;
+	}
+	
+	.index-item {
+		position     : relative;
+		margin-bottom: 26px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		time {
+			position             : absolute;
+			top                  : 6px;
+			left                 : -90px;
+			width                : 6em;
+			font-family          : @font-serif-body;
+			font-size            : 12px;
+			font-feature-settings: "onum";
+			text-align           : right;
+			opacity              : .35;
+		}
+
+		h3 {
+			font-family   : @font-song-body;
+			font-size     : 18px;
+			font-weight   : 400;
+			letter-spacing: (1em/6);
+			line-height   : 26px;
+			hyphens       : none;
+
+			&:not(:lang(zh)),
+			:not(:lang(zh)) {
+				font-family             : @font-serif-body;
+				letter-spacing          : 0.05em;
+				word-spacing            : 0.125em;
+			}
+		}
 	}
 }
 
