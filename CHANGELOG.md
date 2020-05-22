@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+### [v1.9.0][1.9.0] (2020-05-22)
+
+#### Changed
+* Make the alternate styles of Index page for IE 11 (Trident). Testbench: <https://poisson.laerhsif.com/?v=1.9.0>
+
+* * *
+
 ### [v1.8.0][1.8.0] (2020-02-11)
 
 #### Changed
@@ -126,6 +133,7 @@ Release the first version. Testbench: <https://poisson.laerhsif.com/?v=1.0.0>
 
 
 
+[1.9.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.8.0...v1.9.0
 [1.8.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.7.0...v1.8.0
 [1.7.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.6.1...v1.7.0
 [1.6.1]:         https://github.com/realfish/laerhsif-essay/compare/v1.6.0...v1.6.1
