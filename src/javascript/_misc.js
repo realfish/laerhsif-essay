@@ -2,7 +2,7 @@ export default function () {
 	let doc = document;
 
 	// UA marking
-	const UA_LIST = ['iPhone', 'iPad', 'MQQBrowser', 'Android', 'MicroMessenger'];
+	const UA_LIST = ['iPhone', 'iPad', 'MQQBrowser', 'Android', 'MicroMessenger', 'Trident'];
 	let ua = navigator.userAgent;
 	let $html = doc.getElementsByTagName('html')[0];
 	for (let i = 0; i < UA_LIST.length; i++) {
