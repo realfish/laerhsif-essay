@@ -1,6 +1,21 @@
 CHANGELOG
 =========
 
+### [v1.10.0][1.10.0] (2021-03-03)
+
+#### Changed
+* Turn off `.renderHanging()` for the Index page.
+* Remove the outdated `tajs.qq.com` statistics.
+
+#### Fixed
+- Remove `system-ui` from sans-serif font-family fallback list for compatibility of the custom Han font.
+- Remove `Athelas` & `Sitka Text` for a vertical typesetting bug.
+- Update the CSS `text-emphasis-position` value into `under left` to meet the syntax.
+
+Testbench: <https://poisson.laerhsif.com/?v=1.10.0>
+
+* * *
+
 ### [v1.9.0][1.9.0] (2020-05-22)
 
 #### Changed
@@ -133,6 +148,7 @@ Release the first version. Testbench: <https://poisson.laerhsif.com/?v=1.0.0>
 
 
 
+[1.10.0]:        https://github.com/realfish/laerhsif-essay/compare/v1.9.0...v1.10.0
 [1.9.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.8.0...v1.9.0
 [1.8.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.7.0...v1.8.0
 [1.7.0]:         https://github.com/realfish/laerhsif-essay/compare/v1.6.1...v1.7.0

@@ -11,7 +11,7 @@ let doc = document;
 Han(doc.querySelector('.index-list'))
 .initCond()
 .renderElem()
-.renderHanging()
+// .renderHanging()
 .renderJiya()
 .renderHWS()
 /* .correctBasicBD() */
