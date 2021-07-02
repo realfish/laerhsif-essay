@@ -7,7 +7,7 @@
       "uuidString" : "CD9B11D5-75D2-4537-BAFE-0C6EECCE4123"
     }
   ],
-  "creatorBuild" : "34018",
+  "creatorBuild" : "34081",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -614,6 +614,26 @@
       "oF" : 3,
       "oS" : 0
     },
+    "\/articles\/2021-07-02\/article.pug" : {
+      "cB" : 0,
+      "cOD" : 0,
+      "ft" : 512,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/docs\/articles\/2021-07-02\/article.html",
+      "oF" : 0,
+      "oS" : 0
+    },
+    "\/articles\/2021-07-02\/index.pug" : {
+      "cB" : 0,
+      "cOD" : 0,
+      "ft" : 512,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/docs\/2021-07-02\/index.html",
+      "oF" : 3,
+      "oS" : 0
+    },
     "\/CHANGELOG.md" : {
       "cB" : 0,
       "cS" : 0,
@@ -642,7 +662,7 @@
     "\/docs" : {
       "ft" : 65536,
       "oA" : 1,
-      "oAP" : "\/docs",
+      "oAP" : "\/docs\/docs",
       "oF" : 0
     },
     "\/index\/toc.pug" : {
@@ -886,7 +906,7 @@
       "bF" : 4,
       "ft" : 64,
       "ma" : 0,
-      "mi" : 1,
+      "mi" : 2,
       "oA" : 0,
       "oAP" : "\/docs\/assets\/app.js",
       "oF" : 3,
@@ -1305,7 +1325,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "logo-react",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 636403251.15710402
+    "lastBuiltDate" : 646915427.71789098
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
@@ -3337,21 +3357,21 @@
 
       ],
       "contentEntries" : [
-        "!(node_modules)\/**\/*.html",
-        "!(node_modules)\/**\/*.htm",
-        "!(node_modules)\/**\/*.shtml",
-        "!(node_modules)\/**\/*.xhtml",
-        "!(node_modules)\/**\/*.php",
-        "!(node_modules)\/**\/*.js",
-        "!(node_modules)\/**\/*.ts",
-        "!(node_modules)\/**\/*.coffee",
-        "!(node_modules)\/**\/*.erb",
-        "!(node_modules)\/**\/*.pug",
-        "!(node_modules)\/**\/*.jade",
-        "!(node_modules)\/**\/*.slim",
-        "!(node_modules)\/**\/*.haml",
-        "!(node_modules)\/**\/*.md",
-        "!(node_modules)\/**\/*.kit"
+        "**\/*.html",
+        "**\/*.htm",
+        "**\/*.shtml",
+        "**\/*.xhtml",
+        "**\/*.php",
+        "**\/*.js",
+        "**\/*.ts",
+        "**\/*.coffee",
+        "**\/*.erb",
+        "**\/*.pug",
+        "**\/*.jade",
+        "**\/*.slim",
+        "**\/*.haml",
+        "**\/*.md",
+        "**\/*.kit"
       ],
       "removeFontFace" : 0,
       "removeKeyframes" : 0,
