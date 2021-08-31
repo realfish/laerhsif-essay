@@ -26,7 +26,7 @@ rss(
 				//- Ref: https://stackoverflow.com/a/5002161/3253041
 				- let itemTitle = item.title.replace(/<\/?[^>]+(>|$)/g, "");
 				- let itemLink  = channelDomain + item.url.slice(1);
-				- let itemDate  = (new Date(item.date)).toUTCString();
+				- let itemDate  = (new Date(item.date + 'T00:00:00+08:00')).toUTCString();
 				//- title!= `<![CDATA[` + item.title + `]]>`
 				title= itemTitle
 				link= itemLink
@@ -38,5 +38,5 @@ rss(
 			title 404 Not Found: 关于鱼缸
 			link https://poisson.laerhsif.com/404.html
 			guid(isPermaLink="true") https://poisson.laerhsif.com/404.html
-			pubDate= (new Date('2019-12-16')).toUTCString()
+			pubDate= (new Date(Date.parse('2019-12-16T00:00:00+08:00'))).toUTCString()
 			description <![CDATA[<p>404 Not Found: 关于鱼缸<br><a href="https://poisson.laerhsif.com/404.html/">https://poisson.laerhsif.com/404.html</a></p>]]>
