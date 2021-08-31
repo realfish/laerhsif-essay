@@ -7,7 +7,7 @@
       "uuidString" : "CD9B11D5-75D2-4537-BAFE-0C6EECCE4123"
     }
   ],
-  "creatorBuild" : "34081",
+  "creatorBuild" : "34127",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -651,6 +651,26 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/docs\/2021-07-25\/index.html",
+      "oF" : 3,
+      "oS" : 0
+    },
+    "\/articles\/2021-09-01\/article.pug" : {
+      "cB" : 0,
+      "cOD" : 0,
+      "ft" : 512,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/docs\/articles\/2021-09-01\/article.html",
+      "oF" : 0,
+      "oS" : 0
+    },
+    "\/articles\/2021-09-01\/index.pug" : {
+      "cB" : 0,
+      "cOD" : 0,
+      "ft" : 512,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/docs\/2021-09-01\/index.html",
       "oF" : 3,
       "oS" : 0
     },
@@ -1345,7 +1365,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "logo-react",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 648969084.99566495
+    "lastBuiltDate" : 652122349.13506806
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
@@ -3398,6 +3418,9 @@
       "removeVariables" : 0,
       "safelistEntries" : [
 
+      ],
+      "skippedEntries" : [
+        "node_modules\/**"
       ]
     },
     "rollupContext" : "",
@@ -3432,6 +3455,7 @@
     "tsNoImplicitThis" : 0,
     "tsNoImplicitUseStrict" : 0,
     "tsNoLib" : 0,
+    "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
     "tsNoStrictGenericChecks" : 0,
     "tsNoUncheckedIndexAccess" : 0,
