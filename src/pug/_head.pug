@@ -36,10 +36,16 @@ head
 	link(rel="shortcut icon" href=`${assetsPath}assets/favicon.ico?v=${verTag}`)
 
 	link(rel="alternate" type="application/rss+xml" title="鱼缸" href=`${assetsPath}feed/sitemap.xml?v=${verTag}`)
-
+	
+	//- Google Fonts
+	//- Noto Serif Simplified Chinese (500 & 700)
+	//- Noto Sans Simplified Chinese (400 & 500)
+	link(rel="preconnect" href="https://fonts.googleapis.com")
+	link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+	link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet")
+	
 	//- link(rel="preload" href=`${assetsPath}assets/han.woff2?v3.3.0` as="font" crossorigin="anonymous")
 	link(rel="stylesheet" href=`${assetsPath}assets/app.css?v=${verTag}`)
-	//- script(async type="text/javascript" src="//tajs.qq.com/stats?sId=66500633")
 	
 	block headScripts
 	
